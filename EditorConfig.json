@@ -1,0 +1,92 @@
+{
+    "mWindowSize": {
+        "x": 1552,
+        "y": 946
+    },
+    "mWindowPosition": {
+        "x": -8,
+        "y": -8
+    },
+    "mLayout": {
+        "mainDock": {
+            "anchors": {
+                "left": 0.0,
+                "bottom": 0.0,
+                "right": 1.0,
+                "top": 1.0
+            },
+            "childs": [
+                {
+                    "anchors": {
+                        "left": 0.0,
+                        "bottom": 0.0,
+                        "right": 0.7046879529953003,
+                        "top": 1.0
+                    },
+                    "childs": [
+                        {
+                            "anchors": {
+                                "left": 0.0,
+                                "bottom": 0.31596454977989199,
+                                "right": 1.0,
+                                "top": 1.0
+                            },
+                            "childs": [
+                                {
+                                    "anchors": {
+                                        "left": 0.3297331929206848,
+                                        "bottom": 0.0,
+                                        "right": 1.0,
+                                        "top": 1.0
+                                    },
+                                    "windows": [
+                                        "scene window"
+                                    ]
+                                },
+                                {
+                                    "anchors": {
+                                        "left": 0.0,
+                                        "bottom": 0.0,
+                                        "right": 0.3297331929206848,
+                                        "top": 1.0
+                                    },
+                                    "windows": [
+                                        "tree window"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "anchors": {
+                                "left": 0.0,
+                                "bottom": 0.0,
+                                "right": 1.0,
+                                "top": 0.31596454977989199
+                            },
+                            "windows": [
+                                "log window",
+                                "assets window",
+                                "animation window"
+                            ],
+                            "active": "assets window"
+                        }
+                    ]
+                },
+                {
+                    "anchors": {
+                        "left": 0.7046879529953003,
+                        "bottom": 0.0,
+                        "right": 1.0,
+                        "top": 1.0
+                    },
+                    "windows": [
+                        "properties window",
+                        "game window"
+                    ],
+                    "active": "properties window"
+                }
+            ]
+        }
+    },
+    "mLastLoadedScene": "../../Assets/Gamefield.scn"
+}
