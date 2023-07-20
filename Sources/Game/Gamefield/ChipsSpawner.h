@@ -6,12 +6,10 @@ using namespace o2;
 class ChipSpawner : public CellBehaviour
 {
 public:
-	void Process(float dt) override;
+	bool CanSpawn() const;
+	Ref<Chip> SpawnChip(const ActorAssetRef& proto);
 
 	SERIALIZABLE(ChipSpawner);
-
-private:
-	ActorAssetRef mSpawningChip; // @SERIALIZABLE @EDITOR_PROPERTY
 };
 // --- META ---
 
@@ -22,13 +20,13 @@ CLASS_BASES_META(ChipSpawner)
 END_META;
 CLASS_FIELDS_META(ChipSpawner)
 {
-	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().SERIALIZABLE_ATTRIBUTE().NAME(mSpawningChip);
 }
 END_META;
 CLASS_METHODS_META(ChipSpawner)
 {
 
-	FUNCTION().PUBLIC().SIGNATURE(void, Process, float);
+	FUNCTION().PUBLIC().SIGNATURE(bool, CanSpawn);
+	FUNCTION().PUBLIC().SIGNATURE(Ref<Chip>, SpawnChip, const ActorAssetRef&);
 }
 END_META;
 // --- END META ---

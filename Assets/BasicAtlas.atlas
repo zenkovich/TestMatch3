@@ -1,0 +1,1579 @@
+{
+    "mImages": [
+        {
+            "id": "0f0c35a439781a784ae3402000fc3155",
+            "path": "Game field/Objects/Stone/Stone2 (5).png"
+        },
+        {
+            "id": "24ba7a5e60133fda0de32a0c27c71809",
+            "path": "Game field/Objects/Stone/Stone3 (1).png"
+        },
+        {
+            "id": "00f57c061d9e2d952b17333374871c70",
+            "path": "Game field/Objects/Stone/Stone1 (3).png"
+        },
+        {
+            "id": "0d6d04cb16cd7cd8723843bc70c915df",
+            "path": "Game field/Objects/Stone/Stone1 (4).png"
+        },
+        {
+            "id": "14ef3ec514620dfd06983ff743730587",
+            "path": "Game field/Objects/Stone/Stone2 (6).png"
+        },
+        {
+            "id": "5c6b06f53e7b2169261e2e9130f14eff",
+            "path": "Game field/Objects/Stone/Stone1 (6).png"
+        },
+        {
+            "id": "311013a73789454548e037877d555fcb",
+            "path": "Game field/Objects/Stone/Stone2 (2).png"
+        },
+        {
+            "id": "760a43c633601f555f0416e930d27980",
+            "path": "Game field/Objects/Stone/Stone2 (3).png"
+        },
+        {
+            "id": "56af51a127d77fca0f4621006fb66e22",
+            "path": "Game field/Objects/Stone/Stone1 (2).png"
+        },
+        {
+            "id": "744b7264429a25406aa11d4c7c634952",
+            "path": "Game field/Objects/Stone/Stone3 (4).png"
+        },
+        {
+            "id": "5cc41a6a1e9e14331c6628a6671e228b",
+            "path": "Game field/Objects/Stone/Stone2 (4).png"
+        },
+        {
+            "id": "1a3f348300c43b754b4015734057293a",
+            "path": "Game field/Objects/Stone/StoneLine3.png"
+        },
+        {
+            "id": "4a625ac51770194e743a4fc721662d6c",
+            "path": "Game field/Objects/Stone/StoneLine2.png"
+        },
+        {
+            "id": "37d52d072d8b3b482cb16861477a4436",
+            "path": "Game field/Objects/Stone/StoneLine1.png"
+        },
+        {
+            "id": "724a673c6b2464a9125d365f00217843",
+            "path": "Game field/Objects/Stone/Stone2 (1).png"
+        },
+        {
+            "id": "388e76496704019e54a864817f50354b",
+            "path": "Game field/Objects/Stone/Stone1 (1).png"
+        },
+        {
+            "id": "0066167f021b54ac51061a7a7bc04956",
+            "path": "Game field/Objects/Stone/Stone1 (5).png"
+        },
+        {
+            "id": "7a4b4cb9505e664964482361574e6ab1",
+            "path": "Game field/Objects/Stone/Stone3 (6).png"
+        },
+        {
+            "id": "57b676882d74547a2ce1642529de3732",
+            "path": "Game field/Objects/Stone/Stone3 (5).png"
+        },
+        {
+            "id": "027b037d0dda4d4203ea40b6205a39e6",
+            "path": "Game field/Objects/Stone/Stone3 (3).png"
+        },
+        {
+            "id": "72f958413d7f0669115f2f812b7d0b06",
+            "path": "Game field/Objects/Stone/Stone3 (2).png"
+        },
+        {
+            "id": "29912ee44bfd5d1b186546421bf55e13",
+            "path": "Game field/Objects/Ice/Ice1 (4).png"
+        },
+        {
+            "id": "767321ec5c841b863a3300556d954f99",
+            "path": "Game field/Objects/Ice/Ice1 (3).png"
+        },
+        {
+            "id": "40fd330a4562523e44462eb034c901f4",
+            "path": "Game field/Objects/Ice/IceLine1.png"
+        },
+        {
+            "id": "269d22f71a28482d1ea40ba1289a1644",
+            "path": "Game field/Objects/Ice/Ice1 (2).png"
+        },
+        {
+            "id": "136e073c08d156d6202121ba28130875",
+            "path": "Game field/Objects/Ice/IceLine2.png"
+        },
+        {
+            "id": "45442c121e62095313cd4aef4b565893",
+            "path": "Game field/Objects/Ice/IceLine3.png"
+        },
+        {
+            "id": "4cd83a19469527974981635961b9249f",
+            "path": "Game field/Objects/Ice/Ice3 (3).png"
+        },
+        {
+            "id": "72d36dca37662a7b13b71c6c475f1db1",
+            "path": "Game field/Objects/Ice/Ice2 (1).png"
+        },
+        {
+            "id": "0507158e112a646225236db43ddf76a6",
+            "path": "Game field/Objects/Ice/Ice2 (6).png"
+        },
+        {
+            "id": "54a22bec486073710edf00ef2d336527",
+            "path": "Game field/Objects/Ice/Ice3 (6).png"
+        },
+        {
+            "id": "4351498f6656679770cf06d6414d2b66",
+            "path": "Game field/Objects/Ice/Ice3 (5).png"
+        },
+        {
+            "id": "203d2ee4040f01176d397e0545501746",
+            "path": "Game field/Objects/Ice/Ice3 (4).png"
+        },
+        {
+            "id": "422a031f2f784476227248324ae55158",
+            "path": "Game field/Objects/Ice/Ice3 (1).png"
+        },
+        {
+            "id": "068e4ef81ae53279089c308858816455",
+            "path": "Game field/Objects/Ice/Ice2 (2).png"
+        },
+        {
+            "id": "76901c7f548901b059757ec31ee03829",
+            "path": "Game field/Objects/Ice/Ice2 (3).png"
+        },
+        {
+            "id": "28d6749d433547ff3d4862f443417888",
+            "path": "Game field/Objects/Ice/Ice3 (2).png"
+        },
+        {
+            "id": "6be057196e57446c73bc2d5875ab2948",
+            "path": "Game field/Objects/Ice/Ice2 (5).png"
+        },
+        {
+            "id": "13003db45d7564365a9d4a8640fd3f69",
+            "path": "Game field/Objects/Ice/Ice1 (1).png"
+        },
+        {
+            "id": "4d141c620159409d046b288d7a351356",
+            "path": "Game field/Objects/Ice/Ice1 (6).png"
+        },
+        {
+            "id": "554219717048410506995a4a33fe0d99",
+            "path": "Game field/Objects/Ice/Ice1 (5).png"
+        },
+        {
+            "id": "2f675e2f7d4846786ee1503d10021357",
+            "path": "Game field/Objects/Ice/Ice2 (4).png"
+        },
+        {
+            "id": "0a1e49a86ca1206c6d45581205ca100b",
+            "path": "Game field/UI/GreenCounterBack.png"
+        },
+        {
+            "id": "2d0949e6779a35b75a3c079d0a540f56",
+            "path": "Game field/Objects/Main/orange.png"
+        },
+        {
+            "id": "41932ffd48d275b4789b4264225d3a1b",
+            "path": "Game field/Objects/Main/violet.png"
+        },
+        {
+            "id": "6a2a333f2fbf2dd5119570ad26ea1cb9",
+            "path": "Game field/Objects/Main/yellow.png"
+        },
+        {
+            "id": "71a33ea033121f9154050a1d49753e23",
+            "path": "Game field/UI/Settings button.png"
+        },
+        {
+            "id": "2f7c14f05ee57aa8231c5e5d274e745c",
+            "path": "Game field/Objects/Main/green.png"
+        },
+        {
+            "id": "791972b27a442c2e114b6b7269aa5087",
+            "path": "Game field/Objects/Main/blue.png"
+        },
+        {
+            "id": "37027ccd2d8223c60cde79a61b4f113a",
+            "path": "Animal screen/SettingsButton.png"
+        },
+        {
+            "id": "7be76ab97be5029e0169733a2da36146",
+            "path": "Animals/Dog/eyelashes right.png"
+        },
+        {
+            "id": "592d45c52f371b1200273ab5702278fe",
+            "path": "Game field/Objects/Main/red.png"
+        },
+        {
+            "id": "2f530b78578518620179029e25751760",
+            "path": "Animals/Dog/pupil rightpng.png"
+        },
+        {
+            "id": "05b9792a225e60396c53307467f61b44",
+            "path": "Animals/Dog/eyelashes left.png"
+        },
+        {
+            "id": "6e2d3c5b755e624c53d909497a775826",
+            "path": "Animals/Dog/shadow 1 right.png"
+        },
+        {
+            "id": "1a3165781e8e33a871d45d6b63c1128b",
+            "path": "Game field/Objects/bandage.png"
+        },
+        {
+            "id": "3063421f3a183b9c07d0379e450161dc",
+            "path": "Animals/Dog/shadow 1 left.png"
+        },
+        {
+            "id": "5442554d154328c66b53371c5f57525f",
+            "path": "Game field/UI/Button back.png"
+        },
+        {
+            "id": "197235c90479644a44d53b35468a0367",
+            "path": "Game field/Objects/pillow.png"
+        },
+        {
+            "id": "50af3dd2613f550d6a7140327ab26163",
+            "path": "Animals/Dog/legs 2 right.png"
+        },
+        {
+            "id": "6d380f2d1791771d32c13d404ea46b81",
+            "path": "Game field/Objects/patch.png"
+        },
+        {
+            "id": "109507d7021308fc4fa86156739f5d53",
+            "path": "Game field/Objects/water.png"
+        },
+        {
+            "id": "39eb7e895eba65b453047bf713622a7e",
+            "path": "Game field/Objects/brush.png"
+        },
+        {
+            "id": "35f106b9207118e117e9321324781b22",
+            "path": "Game field/Objects/acorn.png"
+        },
+        {
+            "id": "234357d31c885e0e66d301f4798351c2",
+            "path": "Animal screen/SettingsBg.png"
+        },
+        {
+            "id": "3b713ea46a86669f081a4feb4f3d3362",
+            "path": "Animal screen/PlusButton.png"
+        },
+        {
+            "id": "34d6704b4c7f4c5e469955611860184a",
+            "path": "Game field/Objects/wood.png"
+        },
+        {
+            "id": "2fe0062d7d351430713311b739c318a7",
+            "path": "Game field/Objects/bone.png"
+        },
+        {
+            "id": "0180377c1db240ac4e83206e29c45659",
+            "path": "Game field/Objects/food.png"
+        },
+        {
+            "id": "4a5e0c0924ef59655bf0146636c25ef0",
+            "path": "Animals/Dog/brows right.png"
+        },
+        {
+            "id": "7362398730e370fc3773587c50213637",
+            "path": "Game field/UI/GoalsBack.png"
+        },
+        {
+            "id": "22fe4c4c4ec65f6c6505203b53b46418",
+            "path": "Animals/Dog/legs 2 left.png"
+        },
+        {
+            "id": "415e72387e5854586ac66b0048204925",
+            "path": "Animals/Dog/light right.png"
+        },
+        {
+            "id": "260a7d381cf33ad1652e6a9b524e4bc2",
+            "path": "Game field/Objects/leaf.png"
+        },
+        {
+            "id": "12f6300d70e135c73d3a025e1cac57a0",
+            "path": "Game field/Objects/pill.png"
+        },
+        {
+            "id": "19181991762d2d5e1410104832a44360",
+            "path": "Game field/Objects/soap.png"
+        },
+        {
+            "id": "485d5e2125706910494e1ed510755f5c",
+            "path": "Animals/Dog/brows left.png"
+        },
+        {
+            "id": "4d4273cf734a6d22497930291eaa13f5",
+            "path": "Animals/Dog/dog_normal.png"
+        },
+        {
+            "id": "38f3773c084b4f3a35b57ed544b30292",
+            "path": "Animals/Dog/pupil left.png"
+        },
+        {
+            "id": "63e774a35e323e6766e0385e39ac273c",
+            "path": "Animals/Dog/ears right.png"
+        },
+        {
+            "id": "335131ae3758480130d632920e264321",
+            "path": "Animals/Dog/light left.png"
+        },
+        {
+            "id": "666245d3450b463004bd059950391c54",
+            "path": "Animals/Dog/ball right.png"
+        },
+        {
+            "id": "6d0936b32bba298850be3b834d626c3c",
+            "path": "Animal screen/HeartsBg.png"
+        },
+        {
+            "id": "31d71f75685b0be266be7891027650b8",
+            "path": "Animal screen/GbButton.png"
+        },
+        {
+            "id": "04f9351b3db62b9b14e75b5116ef4661",
+            "path": "Animals/Dog/ball left.png"
+        },
+        {
+            "id": "6386119d622a76651f1037224dc563b0",
+            "path": "Animals/Dog/ears left.png"
+        },
+        {
+            "id": "595f34a1770c54247d312a1f00874009",
+            "path": "Game field/UI/StarOff.png"
+        },
+        {
+            "id": "726128c92f792d7b03445ed14da5472a",
+            "path": "Game field/game_field.png"
+        },
+        {
+            "id": "615f0f503fe623ff5477564c565956d2",
+            "path": "Animal screen/PlayBtn.png"
+        },
+        {
+            "id": "7f624f0d02223c454591486f5d6c56fe",
+            "path": "Animal screen/CoinsBg.png"
+        },
+        {
+            "id": "59d13749676d4c933be776ef36851778",
+            "path": "Game field/UI/BarTop.png"
+        },
+        {
+            "id": "16fe3b1c03a3311c14856ad97ca64686",
+            "path": "Game field/UI/StarOn.png"
+        },
+        {
+            "id": "42ae23e2608b308324241b4e5a865133",
+            "path": "Game field/FieldBack.png"
+        },
+        {
+            "id": "3d213b253d5429f569ed1f1454f22e08",
+            "path": "Animal screen/PlayBg.png"
+        },
+        {
+            "id": "09437ef309667fe9404d5a140a1d65c6",
+            "path": "Animal screen/Bubble.png"
+        },
+        {
+            "id": "67633d095d4c3e6906736235550639bc",
+            "path": "Game field/UI/BarBg.png"
+        },
+        {
+            "id": "35aa69c92c4361002b6d34172e4575e4",
+            "path": "Animal screen/Heart.png"
+        },
+        {
+            "id": "67111ca0128070064e0c5078786077c7",
+            "path": "Animal screen/Arrow.png"
+        },
+        {
+            "id": "1f7362ec17773a893e6e55892ad27561",
+            "path": "Game field/Dog legs.png"
+        },
+        {
+            "id": "65a73f570be61b1465d827913728241e",
+            "path": "Animal screen/Coin.png"
+        },
+        {
+            "id": "68af362a140e5e5d458e338036486866",
+            "path": "Animals/Dog/collar.png"
+        },
+        {
+            "id": "055b7a636f367fc768c332c30b256239",
+            "path": "Animals/Dog/dots 1.png"
+        },
+        {
+            "id": "5ea3663a2a727f2c23ce436b483a4daa",
+            "path": "Animals/Dog/dots 2.png"
+        },
+        {
+            "id": "3bd026843c4f3305184857216fc73ef2",
+            "path": "Animals/Dog/dots 3.png"
+        },
+        {
+            "id": "0b4d55e15536573f5e6f029d10435114",
+            "path": "Animals/Dog/shadow.png"
+        },
+        {
+            "id": "02a4760741ac52f769b44fee210f13ae",
+            "path": "Animal screen/FbBg.png"
+        },
+        {
+            "id": "044b59311d4a288d04f363f63e6757ec",
+            "path": "Animal screen/Back.png"
+        },
+        {
+            "id": "3b9a694153833714377c5e521ccd316a",
+            "path": "Animals/Dog/belly.png"
+        },
+        {
+            "id": "3b7a409d30a00a9531b04d1f426a6402",
+            "path": "Animals/Dog/stick.png"
+        },
+        {
+            "id": "468a775c45092d8f02797a6c66775ea0",
+            "path": "Game field/UI/Bar.png"
+        },
+        {
+            "id": "75274353683d2baf1a4905923dca24f0",
+            "path": "Game field/Cloth.png"
+        },
+        {
+            "id": "61381deb082322620fed3bd01a332c5b",
+            "path": "Animals/Dog/legs.png"
+        },
+        {
+            "id": "094962f718492e984d38270a5573018a",
+            "path": "Animals/Dog/nose.png"
+        },
+        {
+            "id": "7ca1420b5ff34bcd0c4763336bb862bd",
+            "path": "Animals/Dog/tail.png"
+        },
+        {
+            "id": "4d774e305b4b7c7d60e363eb73ba53a9",
+            "path": "Animals/Dog/head.png"
+        },
+        {
+            "id": "00555ff0344a1685664f26af68ad3533",
+            "path": "Animals/Dog/gold.png"
+        },
+        {
+            "id": "428f2f4044cb67314f6853ec69df4047",
+            "path": "Game field/Cell.png"
+        },
+        {
+            "id": "7dbd03dd7f3a0dc1595136f205000bcd",
+            "path": "Animals/Dog/fur.png"
+        },
+        {
+            "id": "025b5c1663d50f9d056d3ea753245254",
+            "path": "Game field/Dog.png"
+        }
+    ],
+    "mPages": [
+        {
+            "mSize": {
+                "x": 4096,
+                "y": 4096
+            },
+            "mImagesRects": [
+                {
+                    "Key": "02a4760741ac52f769b44fee210f13ae",
+                    "Value": {
+                        "left": 3646,
+                        "bottom": 1018,
+                        "right": 3994,
+                        "top": 1338
+                    }
+                },
+                {
+                    "Key": "4a5e0c0924ef59655bf0146636c25ef0",
+                    "Value": {
+                        "left": 3959,
+                        "bottom": 3999,
+                        "right": 4039,
+                        "top": 4060
+                    }
+                },
+                {
+                    "Key": "67633d095d4c3e6906736235550639bc",
+                    "Value": {
+                        "left": 2928,
+                        "bottom": 3103,
+                        "right": 3458,
+                        "top": 3541
+                    }
+                },
+                {
+                    "Key": "12f6300d70e135c73d3a025e1cac57a0",
+                    "Value": {
+                        "left": 2429,
+                        "bottom": 3590,
+                        "right": 2662,
+                        "top": 3810
+                    }
+                },
+                {
+                    "Key": "025b5c1663d50f9d056d3ea753245254",
+                    "Value": {
+                        "left": 2812,
+                        "bottom": 1650,
+                        "right": 3154,
+                        "top": 2145
+                    }
+                },
+                {
+                    "Key": "04f9351b3db62b9b14e75b5116ef4661",
+                    "Value": {
+                        "left": 3960,
+                        "bottom": 3590,
+                        "right": 4094,
+                        "top": 3724
+                    }
+                },
+                {
+                    "Key": "3063421f3a183b9c07d0379e450161dc",
+                    "Value": {
+                        "left": 3939,
+                        "bottom": 1740,
+                        "right": 4055,
+                        "top": 1826
+                    }
+                },
+                {
+                    "Key": "485d5e2125706910494e1ed510755f5c",
+                    "Value": {
+                        "left": 3960,
+                        "bottom": 3728,
+                        "right": 4043,
+                        "top": 3789
+                    }
+                },
+                {
+                    "Key": "3d213b253d5429f569ed1f1454f22e08",
+                    "Value": {
+                        "left": 3158,
+                        "bottom": 1650,
+                        "right": 3631,
+                        "top": 2064
+                    }
+                },
+                {
+                    "Key": "05b9792a225e60396c53307467f61b44",
+                    "Value": {
+                        "left": 3927,
+                        "bottom": 3846,
+                        "right": 4062,
+                        "top": 3995
+                    }
+                },
+                {
+                    "Key": "2fe0062d7d351430713311b739c318a7",
+                    "Value": {
+                        "left": 2644,
+                        "bottom": 3846,
+                        "right": 2878,
+                        "top": 4082
+                    }
+                },
+                {
+                    "Key": "2f675e2f7d4846786ee1503d10021357",
+                    "Value": {
+                        "left": 1781,
+                        "bottom": 3846,
+                        "right": 2035,
+                        "top": 4091
+                    }
+                },
+                {
+                    "Key": "4d774e305b4b7c7d60e363eb73ba53a9",
+                    "Value": {
+                        "left": 3237,
+                        "bottom": 2,
+                        "right": 3999,
+                        "top": 649
+                    }
+                },
+                {
+                    "Key": "044b59311d4a288d04f363f63e6757ec",
+                    "Value": {
+                        "left": 2,
+                        "bottom": 2,
+                        "right": 2162,
+                        "top": 3842
+                    }
+                },
+                {
+                    "Key": "415e72387e5854586ac66b0048204925",
+                    "Value": {
+                        "left": 4047,
+                        "bottom": 3728,
+                        "right": 4079,
+                        "top": 3757
+                    }
+                },
+                {
+                    "Key": "5ea3663a2a727f2c23ce436b483a4daa",
+                    "Value": {
+                        "left": 4043,
+                        "bottom": 4032,
+                        "right": 4066,
+                        "top": 4052
+                    }
+                },
+                {
+                    "Key": "38f3773c084b4f3a35b57ed544b30292",
+                    "Value": {
+                        "left": 3955,
+                        "bottom": 2919,
+                        "right": 4051,
+                        "top": 3007
+                    }
+                },
+                {
+                    "Key": "6a2a333f2fbf2dd5119570ad26ea1cb9",
+                    "Value": {
+                        "left": 3104,
+                        "bottom": 3590,
+                        "right": 3314,
+                        "top": 3800
+                    }
+                },
+                {
+                    "Key": "3b9a694153833714377c5e521ccd316a",
+                    "Value": {
+                        "left": 2166,
+                        "bottom": 3103,
+                        "right": 2555,
+                        "top": 3586
+                    }
+                },
+                {
+                    "Key": "59d13749676d4c933be776ef36851778",
+                    "Value": {
+                        "left": 3973,
+                        "bottom": 3446,
+                        "right": 4040,
+                        "top": 3489
+                    }
+                },
+                {
+                    "Key": "22fe4c4c4ec65f6c6505203b53b46418",
+                    "Value": {
+                        "left": 3635,
+                        "bottom": 1650,
+                        "right": 3935,
+                        "top": 2049
+                    }
+                },
+                {
+                    "Key": "615f0f503fe623ff5477564c565956d2",
+                    "Value": {
+                        "left": 3237,
+                        "bottom": 1018,
+                        "right": 3642,
+                        "top": 1375
+                    }
+                },
+                {
+                    "Key": "75274353683d2baf1a4905923dca24f0",
+                    "Value": {
+                        "left": 2882,
+                        "bottom": 3846,
+                        "right": 3660,
+                        "top": 4077
+                    }
+                },
+                {
+                    "Key": "65a73f570be61b1465d827913728241e",
+                    "Value": {
+                        "left": 2666,
+                        "bottom": 3590,
+                        "right": 2886,
+                        "top": 3807
+                    }
+                },
+                {
+                    "Key": "6e2d3c5b755e624c53d909497a775826",
+                    "Value": {
+                        "left": 3939,
+                        "bottom": 1650,
+                        "right": 4050,
+                        "top": 1736
+                    }
+                },
+                {
+                    "Key": "468a775c45092d8f02797a6c66775ea0",
+                    "Value": {
+                        "left": 3462,
+                        "bottom": 3103,
+                        "right": 3969,
+                        "top": 3527
+                    }
+                },
+                {
+                    "Key": "24ba7a5e60133fda0de32a0c27c71809",
+                    "Value": {
+                        "left": 3237,
+                        "bottom": 1379,
+                        "right": 3505,
+                        "top": 1646
+                    }
+                },
+                {
+                    "Key": "055b7a636f367fc768c332c30b256239",
+                    "Value": {
+                        "left": 4070,
+                        "bottom": 4032,
+                        "right": 4088,
+                        "top": 4049
+                    }
+                },
+                {
+                    "Key": "2f530b78578518620179029e25751760",
+                    "Value": {
+                        "left": 3954,
+                        "bottom": 2394,
+                        "right": 4048,
+                        "top": 2482
+                    }
+                },
+                {
+                    "Key": "0180377c1db240ac4e83206e29c45659",
+                    "Value": {
+                        "left": 3616,
+                        "bottom": 653,
+                        "right": 3990,
+                        "top": 1000
+                    }
+                },
+                {
+                    "Key": "3bd026843c4f3305184857216fc73ef2",
+                    "Value": {
+                        "left": 4066,
+                        "bottom": 3846,
+                        "right": 4085,
+                        "top": 3867
+                    }
+                },
+                {
+                    "Key": "7362398730e370fc3773587c50213637",
+                    "Value": {
+                        "left": 2812,
+                        "bottom": 2149,
+                        "right": 3621,
+                        "top": 2569
+                    }
+                },
+                {
+                    "Key": "57b676882d74547a2ce1642529de3732",
+                    "Value": {
+                        "left": 3780,
+                        "bottom": 1379,
+                        "right": 4047,
+                        "top": 1646
+                    }
+                },
+                {
+                    "Key": "19181991762d2d5e1410104832a44360",
+                    "Value": {
+                        "left": 2,
+                        "bottom": 3846,
+                        "right": 277,
+                        "top": 4093
+                    }
+                },
+                {
+                    "Key": "6386119d622a76651f1037224dc563b0",
+                    "Value": {
+                        "left": 3488,
+                        "bottom": 2596,
+                        "right": 3805,
+                        "top": 3059
+                    }
+                },
+                {
+                    "Key": "3b7a409d30a00a9531b04d1f426a6402",
+                    "Value": {
+                        "left": 3927,
+                        "bottom": 3999,
+                        "right": 3955,
+                        "top": 4065
+                    }
+                },
+                {
+                    "Key": "28d6749d433547ff3d4862f443417888",
+                    "Value": {
+                        "left": 3664,
+                        "bottom": 3846,
+                        "right": 3923,
+                        "top": 4067
+                    }
+                },
+                {
+                    "Key": "67111ca0128070064e0c5078786077c7",
+                    "Value": {
+                        "left": 3973,
+                        "bottom": 3103,
+                        "right": 4092,
+                        "top": 3442
+                    }
+                },
+                {
+                    "Key": "63e774a35e323e6766e0385e39ac273c",
+                    "Value": {
+                        "left": 2559,
+                        "bottom": 3103,
+                        "right": 2924,
+                        "top": 3566
+                    }
+                },
+                {
+                    "Key": "0a1e49a86ca1206c6d45581205ca100b",
+                    "Value": {
+                        "left": 3954,
+                        "bottom": 2302,
+                        "right": 4046,
+                        "top": 2390
+                    }
+                },
+                {
+                    "Key": "335131ae3758480130d632920e264321",
+                    "Value": {
+                        "left": 4043,
+                        "bottom": 3999,
+                        "right": 4073,
+                        "top": 4028
+                    }
+                },
+                {
+                    "Key": "791972b27a442c2e114b6b7269aa5087",
+                    "Value": {
+                        "left": 2890,
+                        "bottom": 3590,
+                        "right": 3100,
+                        "top": 3800
+                    }
+                },
+                {
+                    "Key": "6d0936b32bba298850be3b834d626c3c",
+                    "Value": {
+                        "left": 3237,
+                        "bottom": 653,
+                        "right": 3612,
+                        "top": 1014
+                    }
+                },
+                {
+                    "Key": "13003db45d7564365a9d4a8640fd3f69",
+                    "Value": {
+                        "left": 3809,
+                        "bottom": 2596,
+                        "right": 4081,
+                        "top": 2915
+                    }
+                },
+                {
+                    "Key": "7be76ab97be5029e0169733a2da36146",
+                    "Value": {
+                        "left": 3954,
+                        "bottom": 2149,
+                        "right": 4090,
+                        "top": 2298
+                    }
+                },
+                {
+                    "Key": "14ef3ec514620dfd06983ff743730587",
+                    "Value": {
+                        "left": 3509,
+                        "bottom": 1379,
+                        "right": 3776,
+                        "top": 1646
+                    }
+                },
+                {
+                    "Key": "592d45c52f371b1200273ab5702278fe",
+                    "Value": {
+                        "left": 3532,
+                        "bottom": 3590,
+                        "right": 3742,
+                        "top": 3800
+                    }
+                },
+                {
+                    "Key": "197235c90479644a44d53b35468a0367",
+                    "Value": {
+                        "left": 2039,
+                        "bottom": 3846,
+                        "right": 2300,
+                        "top": 4088
+                    }
+                },
+                {
+                    "Key": "35aa69c92c4361002b6d34172e4575e4",
+                    "Value": {
+                        "left": 2304,
+                        "bottom": 3846,
+                        "right": 2640,
+                        "top": 4087
+                    }
+                },
+                {
+                    "Key": "4d4273cf734a6d22497930291eaa13f5",
+                    "Value": {
+                        "left": 2166,
+                        "bottom": 2,
+                        "right": 3233,
+                        "top": 1646
+                    }
+                },
+                {
+                    "Key": "50af3dd2613f550d6a7140327ab26163",
+                    "Value": {
+                        "left": 3625,
+                        "bottom": 2149,
+                        "right": 3950,
+                        "top": 2548
+                    }
+                },
+                {
+                    "Key": "666245d3450b463004bd059950391c54",
+                    "Value": {
+                        "left": 3809,
+                        "bottom": 2919,
+                        "right": 3951,
+                        "top": 3053
+                    }
+                },
+                {
+                    "Key": "0b4d55e15536573f5e6f029d10435114",
+                    "Value": {
+                        "left": 281,
+                        "bottom": 3846,
+                        "right": 1519,
+                        "top": 4092
+                    }
+                },
+                {
+                    "Key": "203d2ee4040f01176d397e0545501746",
+                    "Value": {
+                        "left": 1523,
+                        "bottom": 3846,
+                        "right": 1777,
+                        "top": 4091
+                    }
+                },
+                {
+                    "Key": "2d0949e6779a35b75a3c079d0a540f56",
+                    "Value": {
+                        "left": 3318,
+                        "bottom": 3590,
+                        "right": 3528,
+                        "top": 3800
+                    }
+                },
+                {
+                    "Key": "61381deb082322620fed3bd01a332c5b",
+                    "Value": {
+                        "left": 2166,
+                        "bottom": 1650,
+                        "right": 2808,
+                        "top": 2592
+                    }
+                },
+                {
+                    "Key": "09437ef309667fe9404d5a140a1d65c6",
+                    "Value": {
+                        "left": 2166,
+                        "bottom": 2596,
+                        "right": 3484,
+                        "top": 3099
+                    }
+                },
+                {
+                    "Key": "068e4ef81ae53279089c308858816455",
+                    "Value": {
+                        "left": 2166,
+                        "bottom": 3590,
+                        "right": 2425,
+                        "top": 3811
+                    }
+                },
+                {
+                    "Key": "41932ffd48d275b4789b4264225d3a1b",
+                    "Value": {
+                        "left": 3746,
+                        "bottom": 3590,
+                        "right": 3956,
+                        "top": 3800
+                    }
+                }
+            ]
+        },
+        {
+            "mId": 1,
+            "mSize": {
+                "x": 4096,
+                "y": 4096
+            },
+            "mImagesRects": [
+                {
+                    "Key": "00f57c061d9e2d952b17333374871c70",
+                    "Value": {
+                        "left": 2,
+                        "bottom": 3780,
+                        "right": 281,
+                        "top": 4088
+                    }
+                },
+                {
+                    "Key": "37d52d072d8b3b482cb16861477a4436",
+                    "Value": {
+                        "left": 1861,
+                        "bottom": 2818,
+                        "right": 3310,
+                        "top": 2886
+                    }
+                },
+                {
+                    "Key": "40fd330a4562523e44462eb034c901f4",
+                    "Value": {
+                        "left": 731,
+                        "bottom": 3004,
+                        "right": 2249,
+                        "top": 3095
+                    }
+                },
+                {
+                    "Key": "7ca1420b5ff34bcd0c4763336bb862bd",
+                    "Value": {
+                        "left": 2434,
+                        "bottom": 3466,
+                        "right": 2817,
+                        "top": 3734
+                    }
+                },
+                {
+                    "Key": "7f624f0d02223c454591486f5d6c56fe",
+                    "Value": {
+                        "left": 3349,
+                        "bottom": 3142,
+                        "right": 4006,
+                        "top": 3326
+                    }
+                },
+                {
+                    "Key": "45442c121e62095313cd4aef4b565893",
+                    "Value": {
+                        "left": 1861,
+                        "bottom": 2890,
+                        "right": 3244,
+                        "top": 2945
+                    }
+                },
+                {
+                    "Key": "4cd83a19469527974981635961b9249f",
+                    "Value": {
+                        "left": 3824,
+                        "bottom": 3466,
+                        "right": 4064,
+                        "top": 3730
+                    }
+                },
+                {
+                    "Key": "6be057196e57446c73bc2d5875ab2948",
+                    "Value": {
+                        "left": 2447,
+                        "bottom": 3142,
+                        "right": 2707,
+                        "top": 3400
+                    }
+                },
+                {
+                    "Key": "16fe3b1c03a3311c14856ad97ca64686",
+                    "Value": {
+                        "left": 3137,
+                        "bottom": 3142,
+                        "right": 3345,
+                        "top": 3328
+                    }
+                },
+                {
+                    "Key": "422a031f2f784476227248324ae55158",
+                    "Value": {
+                        "left": 1950,
+                        "bottom": 3142,
+                        "right": 2179,
+                        "top": 3401
+                    }
+                },
+                {
+                    "Key": "68af362a140e5e5d458e338036486866",
+                    "Value": {
+                        "left": 1368,
+                        "bottom": 2818,
+                        "right": 1857,
+                        "top": 2958
+                    }
+                },
+                {
+                    "Key": "6d380f2d1791771d32c13d404ea46b81",
+                    "Value": {
+                        "left": 2821,
+                        "bottom": 3466,
+                        "right": 3033,
+                        "top": 3734
+                    }
+                },
+                {
+                    "Key": "260a7d381cf33ad1652e6a9b524e4bc2",
+                    "Value": {
+                        "left": 354,
+                        "bottom": 2818,
+                        "right": 552,
+                        "top": 3133
+                    }
+                },
+                {
+                    "Key": "136e073c08d156d6202121ba28130875",
+                    "Value": {
+                        "left": 2018,
+                        "bottom": 2757,
+                        "right": 3796,
+                        "top": 2807
+                    }
+                },
+                {
+                    "Key": "724a673c6b2464a9125d365f00217843",
+                    "Value": {
+                        "left": 3037,
+                        "bottom": 3466,
+                        "right": 3305,
+                        "top": 3733
+                    }
+                },
+                {
+                    "Key": "428f2f4044cb67314f6853ec69df4047",
+                    "Value": {
+                        "left": 837,
+                        "bottom": 2818,
+                        "right": 1013,
+                        "top": 2994
+                    }
+                },
+                {
+                    "Key": "72f958413d7f0669115f2f812b7d0b06",
+                    "Value": {
+                        "left": 1892,
+                        "bottom": 3466,
+                        "right": 2159,
+                        "top": 3734
+                    }
+                },
+                {
+                    "Key": "388e76496704019e54a864817f50354b",
+                    "Value": {
+                        "left": 1396,
+                        "bottom": 3780,
+                        "right": 1692,
+                        "top": 4082
+                    }
+                },
+                {
+                    "Key": "34d6704b4c7f4c5e469955611860184a",
+                    "Value": {
+                        "left": 3679,
+                        "bottom": 3780,
+                        "right": 3937,
+                        "top": 4056
+                    }
+                },
+                {
+                    "Key": "5442554d154328c66b53371c5f57525f",
+                    "Value": {
+                        "left": 2,
+                        "bottom": 3142,
+                        "right": 350,
+                        "top": 3462
+                    }
+                },
+                {
+                    "Key": "4d141c620159409d046b288d7a351356",
+                    "Value": {
+                        "left": 2230,
+                        "bottom": 3780,
+                        "right": 2508,
+                        "top": 4072
+                    }
+                },
+                {
+                    "Key": "744b7264429a25406aa11d4c7c634952",
+                    "Value": {
+                        "left": 1348,
+                        "bottom": 3466,
+                        "right": 1617,
+                        "top": 3735
+                    }
+                },
+                {
+                    "Key": "5cc41a6a1e9e14331c6628a6671e228b",
+                    "Value": {
+                        "left": 1075,
+                        "bottom": 3466,
+                        "right": 1344,
+                        "top": 3737
+                    }
+                },
+                {
+                    "Key": "554219717048410506995a4a33fe0d99",
+                    "Value": {
+                        "left": 1696,
+                        "bottom": 3780,
+                        "right": 1977,
+                        "top": 4081
+                    }
+                },
+                {
+                    "Key": "31d71f75685b0be266be7891027650b8",
+                    "Value": {
+                        "left": 3128,
+                        "bottom": 3780,
+                        "right": 3432,
+                        "top": 4059
+                    }
+                },
+                {
+                    "Key": "1a3165781e8e33a871d45d6b63c1128b",
+                    "Value": {
+                        "left": 1981,
+                        "bottom": 3780,
+                        "right": 2226,
+                        "top": 4078
+                    }
+                },
+                {
+                    "Key": "027b037d0dda4d4203ea40b6205a39e6",
+                    "Value": {
+                        "left": 653,
+                        "bottom": 3142,
+                        "right": 915,
+                        "top": 3405
+                    }
+                },
+                {
+                    "Key": "0066167f021b54ac51061a7a7bc04956",
+                    "Value": {
+                        "left": 1102,
+                        "bottom": 3780,
+                        "right": 1392,
+                        "top": 4082
+                    }
+                },
+                {
+                    "Key": "76901c7f548901b059757ec31ee03829",
+                    "Value": {
+                        "left": 3580,
+                        "bottom": 3466,
+                        "right": 3820,
+                        "top": 3730
+                    }
+                },
+                {
+                    "Key": "39eb7e895eba65b453047bf713622a7e",
+                    "Value": {
+                        "left": 3436,
+                        "bottom": 3780,
+                        "right": 3675,
+                        "top": 4058
+                    }
+                },
+                {
+                    "Key": "0507158e112a646225236db43ddf76a6",
+                    "Value": {
+                        "left": 1225,
+                        "bottom": 3142,
+                        "right": 1467,
+                        "top": 3404
+                    }
+                },
+                {
+                    "Key": "4351498f6656679770cf06d6414d2b66",
+                    "Value": {
+                        "left": 2183,
+                        "bottom": 3142,
+                        "right": 2443,
+                        "top": 3400
+                    }
+                },
+                {
+                    "Key": "71a33ea033121f9154050a1d49753e23",
+                    "Value": {
+                        "left": 2512,
+                        "bottom": 3780,
+                        "right": 2816,
+                        "top": 4060
+                    }
+                },
+                {
+                    "Key": "595f34a1770c54247d312a1f00874009",
+                    "Value": {
+                        "left": 2925,
+                        "bottom": 3142,
+                        "right": 3133,
+                        "top": 3328
+                    }
+                },
+                {
+                    "Key": "56af51a127d77fca0f4621006fb66e22",
+                    "Value": {
+                        "left": 299,
+                        "bottom": 3466,
+                        "right": 587,
+                        "top": 3773
+                    }
+                },
+                {
+                    "Key": "0f0c35a439781a784ae3402000fc3155",
+                    "Value": {
+                        "left": 2163,
+                        "bottom": 3466,
+                        "right": 2430,
+                        "top": 3734
+                    }
+                },
+                {
+                    "Key": "3b713ea46a86669f081a4feb4f3d3362",
+                    "Value": {
+                        "left": 1017,
+                        "bottom": 2818,
+                        "right": 1189,
+                        "top": 2983
+                    }
+                },
+                {
+                    "Key": "311013a73789454548e037877d555fcb",
+                    "Value": {
+                        "left": 1621,
+                        "bottom": 3466,
+                        "right": 1888,
+                        "top": 3734
+                    }
+                },
+                {
+                    "Key": "35f106b9207118e117e9321324781b22",
+                    "Value": {
+                        "left": 285,
+                        "bottom": 3780,
+                        "right": 534,
+                        "top": 4087
+                    }
+                },
+                {
+                    "Key": "7a4b4cb9505e664964482361574e6ab1",
+                    "Value": {
+                        "left": 3309,
+                        "bottom": 3466,
+                        "right": 3576,
+                        "top": 3731
+                    }
+                },
+                {
+                    "Key": "760a43c633601f555f0416e930d27980",
+                    "Value": {
+                        "left": 803,
+                        "bottom": 3466,
+                        "right": 1071,
+                        "top": 3738
+                    }
+                },
+                {
+                    "Key": "726128c92f792d7b03445ed14da5472a",
+                    "Value": {
+                        "left": 2018,
+                        "bottom": 2,
+                        "right": 4034,
+                        "top": 2753
+                    }
+                },
+                {
+                    "Key": "72d36dca37662a7b13b71c6c475f1db1",
+                    "Value": {
+                        "left": 1717,
+                        "bottom": 3142,
+                        "right": 1946,
+                        "top": 3401
+                    }
+                },
+                {
+                    "Key": "0d6d04cb16cd7cd8723843bc70c915df",
+                    "Value": {
+                        "left": 354,
+                        "bottom": 3142,
+                        "right": 649,
+                        "top": 3450
+                    }
+                },
+                {
+                    "Key": "37027ccd2d8223c60cde79a61b4f113a",
+                    "Value": {
+                        "left": 2820,
+                        "bottom": 3780,
+                        "right": 3124,
+                        "top": 4060
+                    }
+                },
+                {
+                    "Key": "234357d31c885e0e66d301f4798351c2",
+                    "Value": {
+                        "left": 2,
+                        "bottom": 2818,
+                        "right": 350,
+                        "top": 3138
+                    }
+                },
+                {
+                    "Key": "109507d7021308fc4fa86156739f5d53",
+                    "Value": {
+                        "left": 591,
+                        "bottom": 3466,
+                        "right": 799,
+                        "top": 3741
+                    }
+                },
+                {
+                    "Key": "7dbd03dd7f3a0dc1595136f205000bcd",
+                    "Value": {
+                        "left": 556,
+                        "bottom": 2818,
+                        "right": 833,
+                        "top": 3000
+                    }
+                },
+                {
+                    "Key": "42ae23e2608b308324241b4e5a865133",
+                    "Value": {
+                        "left": 2,
+                        "bottom": 2,
+                        "right": 2014,
+                        "top": 2814
+                    }
+                },
+                {
+                    "Key": "29912ee44bfd5d1b186546421bf55e13",
+                    "Value": {
+                        "left": 2,
+                        "bottom": 3466,
+                        "right": 295,
+                        "top": 3776
+                    }
+                },
+                {
+                    "Key": "767321ec5c841b863a3300556d954f99",
+                    "Value": {
+                        "left": 538,
+                        "bottom": 3780,
+                        "right": 803,
+                        "top": 4086
+                    }
+                },
+                {
+                    "Key": "54a22bec486073710edf00ef2d336527",
+                    "Value": {
+                        "left": 1471,
+                        "bottom": 3142,
+                        "right": 1713,
+                        "top": 3404
+                    }
+                },
+                {
+                    "Key": "1f7362ec17773a893e6e55892ad27561",
+                    "Value": {
+                        "left": 2253,
+                        "bottom": 3004,
+                        "right": 2715,
+                        "top": 3095
+                    }
+                },
+                {
+                    "Key": "2f7c14f05ee57aa8231c5e5d274e745c",
+                    "Value": {
+                        "left": 2711,
+                        "bottom": 3142,
+                        "right": 2921,
+                        "top": 3352
+                    }
+                },
+                {
+                    "Key": "00555ff0344a1685664f26af68ad3533",
+                    "Value": {
+                        "left": 1193,
+                        "bottom": 2818,
+                        "right": 1364,
+                        "top": 2979
+                    }
+                },
+                {
+                    "Key": "5c6b06f53e7b2169261e2e9130f14eff",
+                    "Value": {
+                        "left": 807,
+                        "bottom": 3780,
+                        "right": 1098,
+                        "top": 4082
+                    }
+                },
+                {
+                    "Key": "269d22f71a28482d1ea40ba1289a1644",
+                    "Value": {
+                        "left": 919,
+                        "bottom": 3142,
+                        "right": 1221,
+                        "top": 3404
+                    }
+                },
+                {
+                    "Key": "094962f718492e984d38270a5573018a",
+                    "Value": {
+                        "left": 556,
+                        "bottom": 3004,
+                        "right": 727,
+                        "top": 3106
+                    }
+                }
+            ]
+        },
+        {
+            "mId": 2,
+            "mSize": {
+                "x": 4096,
+                "y": 4096
+            },
+            "mImagesRects": [
+                {
+                    "Key": "1a3f348300c43b754b4015734057293a",
+                    "Value": {
+                        "left": 2,
+                        "bottom": 50,
+                        "right": 1879,
+                        "top": 94
+                    }
+                },
+                {
+                    "Key": "4a625ac51770194e743a4fc721662d6c",
+                    "Value": {
+                        "left": 2,
+                        "bottom": 2,
+                        "right": 1879,
+                        "top": 46
+                    }
+                }
+            ]
+        }
+    ]
+}

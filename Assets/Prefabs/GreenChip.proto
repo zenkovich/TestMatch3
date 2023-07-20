@@ -1,0 +1,40 @@
+{
+    "mActor": {
+        "Type": "o2::Actor",
+        "Value": {
+            "Prototype": {
+                "id": "4a3a762c49ae7ae03a3d457561390179",
+                "path": "Prefabs/BaseChip.proto"
+            },
+            "PrototypeLink": 14915051646395384656,
+            "Id": 2487933375947867135,
+            "Children": [
+                {
+                    "Type": "o2::Actor",
+                    "Data": {
+                        "PrototypeLink": 18031039795294469308,
+                        "Id": 17120841568389206482,
+                        "Components": [
+                            {
+                                "Type": "o2::ImageComponent",
+                                "Data": {
+                                    "PrototypeLink": 3193111594294754577,
+                                    "mId": 17670341157590257680
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "Components": [
+                {
+                    "Type": "Chip",
+                    "Data": {
+                        "PrototypeLink": 11873778382250684669,
+                        "mId": 18248837420117562346
+                    }
+                }
+            ]
+        }
+    }
+}

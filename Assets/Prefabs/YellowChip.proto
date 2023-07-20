@@ -1,0 +1,46 @@
+{
+    "mActor": {
+        "Type": "o2::Actor",
+        "Value": {
+            "Prototype": {
+                "id": "4a3a762c49ae7ae03a3d457561390179",
+                "path": "Prefabs/BaseChip.proto"
+            },
+            "PrototypeLink": 14915051646395384656,
+            "Id": 8364980144767905331,
+            "mName": "YellowChip",
+            "Children": [
+                {
+                    "Type": "o2::Actor",
+                    "Data": {
+                        "PrototypeLink": 18031039795294469308,
+                        "Id": 10199672159174005578,
+                        "Components": [
+                            {
+                                "Type": "o2::ImageComponent",
+                                "Data": {
+                                    "PrototypeLink": 3193111594294754577,
+                                    "mImageAsset": {
+                                        "id": "6a2a333f2fbf2dd5119570ad26ea1cb9",
+                                        "path": "Game field/Objects/Main/yellow.png"
+                                    },
+                                    "mId": 6652787461707552431
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "Components": [
+                {
+                    "Type": "Chip",
+                    "Data": {
+                        "PrototypeLink": 11873778382250684669,
+                        "mColor": "Yellow",
+                        "mId": 462488089170374870
+                    }
+                }
+            ]
+        }
+    }
+}

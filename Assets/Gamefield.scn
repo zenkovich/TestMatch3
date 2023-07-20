@@ -1,0 +1,144 @@
+{
+    "Layers": [
+        {
+            "mName": "Default"
+        },
+        null
+    ],
+    "DefaultLayer": "Default",
+    "Tags": null,
+    "Actors": [
+        {
+            "Type": "o2::CameraActor",
+            "Value": {
+                "mName": "Camera",
+                "fillColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0,
+                    "a": 255
+                },
+                "mType": "FittedSize",
+                "mFixedOrFittedSize": {
+                    "x": 1024.0,
+                    "y": 768.0
+                },
+                "Id": 10088183424363624464,
+                "Transform": {
+                    "size": {
+                        "x": 1024.0,
+                        "y": 1759.1795654296876
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                }
+            }
+        },
+        {
+            "Type": "o2::Actor",
+            "Value": {
+                "mName": "Back",
+                "Id": 7836838211585741885,
+                "Transform": {
+                    "size": {
+                        "x": 1024.0,
+                        "y": 3840.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "Components": [
+                    {
+                        "Type": "o2::ImageComponent",
+                        "Data": {
+                            "mDrawingDepth": -1.0,
+                            "mInheritDrawingDepthFromParent": false,
+                            "mImageAsset": {
+                                "id": "2ceb437b033072b6266133a13c8704d7",
+                                "path": "Game field/Back.png"
+                            },
+                            "mMode": "FixedAspect",
+                            "mId": 8382529807859808627
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::Actor",
+            "Value": {
+                "mName": "Gamefield",
+                "Id": 3625219943961589091,
+                "Transform": {
+                    "size": {
+                        "x": 100.0,
+                        "y": 100.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "Components": [
+                    {
+                        "Type": "Gamefield",
+                        "Data": {
+                            "mChipProtos": [
+                                {
+                                    "id": "5df61a3c040f77ab119879c95fb54227",
+                                    "path": "Prefabs/RedChip.proto"
+                                },
+                                {
+                                    "id": "65357ae316d821702718254d73d46ea8",
+                                    "path": "Prefabs/GreenChip.proto"
+                                },
+                                {
+                                    "id": "69e80dd763cd3c98427b54942bff1dbe",
+                                    "path": "Prefabs/BlueChip.proto"
+                                },
+                                {
+                                    "id": "541315764037641457d87848062d1a4d",
+                                    "path": "Prefabs/YellowChip.proto"
+                                },
+                                {
+                                    "id": "32da750b263d64c2678d50a73d9f785b",
+                                    "path": "Prefabs/VioletChip.proto"
+                                }
+                            ],
+                            "mChipsFallingMaxSpeed": 3000.0,
+                            "mChipsFallingAcceleration": 5000.0,
+                            "mCellSize": {
+                                "x": 100.0,
+                                "y": 100.0
+                            },
+                            "mCellsContainer": {
+                                "ID": 3625219943961589091
+                            },
+                            "mCellProto": {
+                                "id": "0ed60a2764fd0a834ecc6d0201c03b52",
+                                "path": "Prefabs/Cell.proto"
+                            },
+                            "mId": 6193086113682722973
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

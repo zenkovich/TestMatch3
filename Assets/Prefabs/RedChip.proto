@@ -1,0 +1,45 @@
+{
+    "mActor": {
+        "Type": "o2::Actor",
+        "Value": {
+            "Prototype": {
+                "id": "4a3a762c49ae7ae03a3d457561390179",
+                "path": "Prefabs/BaseChip.proto"
+            },
+            "PrototypeLink": 14915051646395384656,
+            "Id": 7080944144751388963,
+            "mName": "RedChip",
+            "Children": [
+                {
+                    "Type": "o2::Actor",
+                    "Data": {
+                        "PrototypeLink": 18031039795294469308,
+                        "Id": 1083848855595741722,
+                        "Components": [
+                            {
+                                "Type": "o2::ImageComponent",
+                                "Data": {
+                                    "PrototypeLink": 3193111594294754577,
+                                    "mImageAsset": {
+                                        "id": "592d45c52f371b1200273ab5702278fe",
+                                        "path": "Game field/Objects/Main/red.png"
+                                    },
+                                    "mId": 13176592688837165288
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "Components": [
+                {
+                    "Type": "Chip",
+                    "Data": {
+                        "PrototypeLink": 11873778382250684669,
+                        "mId": 14353699713821717702
+                    }
+                }
+            ]
+        }
+    }
+}

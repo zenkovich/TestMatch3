@@ -1,0 +1,46 @@
+{
+    "mActor": {
+        "Type": "o2::Actor",
+        "Value": {
+            "Prototype": {
+                "id": "4a3a762c49ae7ae03a3d457561390179",
+                "path": "Prefabs/BaseChip.proto"
+            },
+            "PrototypeLink": 14915051646395384656,
+            "Id": 17032798822912799338,
+            "mName": "VioletChip",
+            "Children": [
+                {
+                    "Type": "o2::Actor",
+                    "Data": {
+                        "PrototypeLink": 18031039795294469308,
+                        "Id": 7268754051128137600,
+                        "Components": [
+                            {
+                                "Type": "o2::ImageComponent",
+                                "Data": {
+                                    "PrototypeLink": 3193111594294754577,
+                                    "mImageAsset": {
+                                        "id": "41932ffd48d275b4789b4264225d3a1b",
+                                        "path": "Game field/Objects/Main/violet.png"
+                                    },
+                                    "mId": 7194573520921670995
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "Components": [
+                {
+                    "Type": "Chip",
+                    "Data": {
+                        "PrototypeLink": 11873778382250684669,
+                        "mColor": "Violet",
+                        "mId": 12287080194746871034
+                    }
+                }
+            ]
+        }
+    }
+}
