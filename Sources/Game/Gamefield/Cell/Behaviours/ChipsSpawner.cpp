@@ -1,7 +1,7 @@
 #include "o2/stdafx.h"
 #include "ChipsSpawner.h"
-#include "CellBehaviour.h"
-#include "Cell.h"
+
+#include "Gamefield/Cell/Cell.h"
 
 bool ChipSpawner::CanSpawn() const
 {

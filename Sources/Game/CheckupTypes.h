@@ -1,7 +1,7 @@
 #pragma once
 #include "GameManager.h"
 #include "GameMenu.h"
-#include "Gamefield/Cell.h"
+#include "Gamefield/Cell/Cell.h"
 #include "Gamefield/Gamefield.h"
 
 void CheckupTypes()

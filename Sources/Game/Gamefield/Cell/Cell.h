@@ -1,10 +1,10 @@
 #pragma once
-#include "CellBehaviour.h"
-#include "Chip.h"
+#include "Gamefield/Cell/CellBehaviour.h"
+#include "Gamefield/Chip/Chip.h"
+#include "o2/Events/CursorAreaEventsListener.h"
 #include "o2/Scene/Component.h"
 #include "o2/Scene/ComponentRef.h"
 #include "o2/Scene/DrawableComponent.h"
-#include "o2/Events/CursorAreaEventsListener.h"
 
 using namespace o2;
 

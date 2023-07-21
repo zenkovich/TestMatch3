@@ -1,7 +1,7 @@
 #pragma once
-#include "Cell.h"
-#include "ChipsSpawner.h"
-#include "GamefieldBehaviour.h"
+#include "Gamefield/Cell/Behaviours/ChipsSpawner.h"
+#include "Gamefield/Cell/Cell.h"
+#include "Gamefield/GamefieldBehaviour.h"
 #include "o2/Scene/Component.h"
 #include "o2/Scene/ComponentRef.h"
 

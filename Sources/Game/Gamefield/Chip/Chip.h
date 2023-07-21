@@ -1,7 +1,7 @@
 #pragma once
+#include "Gamefield/Chip/ChipBehaviour.h"
 #include "o2/Scene/Component.h"
 #include "o2/Scene/ComponentRef.h"
-#include "ChipBehaviour.h"
 
 using namespace o2;
 

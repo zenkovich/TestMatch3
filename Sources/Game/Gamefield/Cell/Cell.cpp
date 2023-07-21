@@ -1,7 +1,7 @@
 #include "o2/stdafx.h"
 #include "Cell.h"
 
-#include "Gamefield.h"
+#include "Gamefield/Gamefield.h"
 
 void Cell::OnStart()
 {

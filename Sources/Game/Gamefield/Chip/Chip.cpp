@@ -1,9 +1,9 @@
 #include "o2/stdafx.h"
 #include "Chip.h"
 
-#include "o2/Scene/Scene.h"
+#include "Gamefield/Cell/Cell.h"
 #include "o2/Render/Render.h"
-#include "Cell.h"
+#include "o2/Scene/Scene.h"
 
 #undef DrawText
 

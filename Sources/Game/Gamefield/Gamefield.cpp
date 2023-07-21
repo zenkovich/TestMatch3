@@ -1,6 +1,6 @@
 #include "o2/stdafx.h"
 #include "Gamefield.h"
-#include "ChipsSpawner.h"
+
 #include "o2/Scene/Scene.h"
 
 void Gamefield::OnStart()

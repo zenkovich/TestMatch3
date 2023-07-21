@@ -1,5 +1,5 @@
 #pragma once
-#include "CellBehaviour.h"
+#include "Gamefield/Cell/CellBehaviour.h"
 
 using namespace o2;
 

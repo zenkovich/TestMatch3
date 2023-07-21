@@ -1,6 +1,7 @@
 #include "o2/stdafx.h"
 #include "CellBehaviour.h"
-#include "Cell.h"
+
+#include "Gamefield/Cell/Cell.h"
 
 
 void CellBehaviour::SetCell(Cell* cell)
