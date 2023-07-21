@@ -62,6 +62,8 @@ private:
 	FallAvoidDirection mAvoidDirection = FallAvoidDirection::Left; // @EDITOR_PROPERTY
 
 private:
+	void OnCursorPressed(const Input::Cursor& cursor) override;
+	void OnCursorExit(const Input::Cursor& cursor) override;
 	void OnCursorRightMouseReleased(const Input::Cursor& cursor) override;
 };
 // --- META ---
@@ -108,6 +110,8 @@ CLASS_METHODS_META(Cell)
 	FUNCTION().PUBLIC().SIGNATURE(FallAvoidDirection, GetFallAvoidDirection);
 	FUNCTION().PUBLIC().SIGNATURE(void, SwapFallAvoidDirection);
 	FUNCTION().PUBLIC().SIGNATURE(bool, IsUnderPoint, const Vec2F&);
+	FUNCTION().PRIVATE().SIGNATURE(void, OnCursorPressed, const Input::Cursor&);
+	FUNCTION().PRIVATE().SIGNATURE(void, OnCursorExit, const Input::Cursor&);
 	FUNCTION().PRIVATE().SIGNATURE(void, OnCursorRightMouseReleased, const Input::Cursor&);
 }
 END_META;

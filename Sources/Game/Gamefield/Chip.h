@@ -10,7 +10,7 @@ class Cell;
 class Chip: public Component
 {
 public:
-	enum class State { Standing, Falling, Swapping, Destroying };
+	enum class State { Standing, Falling, CheckFallingNext, Swapping, Destroying };
 	enum class Color { Red, Green, Blue, Yellow, Violet };
 
 public:
@@ -28,6 +28,14 @@ public:
 	void SetCell(Cell*);
 	Cell* GetCell();
 
+	bool IsFalling() const;
+
+	void CheckFallingDown();
+	void CheckFallingSide();
+
+	void UpdateFallingStep1(float dt);
+	void UpdateFallingStep2(float dt);
+
 	SERIALIZABLE(Chip);
 
 private:
@@ -38,16 +46,19 @@ private:
 	Vector<Ref<ChipBehaviour>> mBehaviours; // @EDITOR_PROPERTY
 
 	Cell* mCell = nullptr;
+
 	float mFallSpeedMax = 0.0f;
 	float mFallAcceleration = 0.0f;
 	float mFallSpeed = 0.0f;
 
+	float mAccumulatedFallDistance = 0.0f;
+
 private:
-	void UpdateFalling(float dt);
+	void UpdateFalling(float distance);
+	void ContinueFalling();
+	void StopFalling();
 
-	void CheckFallDown();
-
-	void UpdateStanding(float dt);
+	void UpdateSwapping(float dt);
 };
 // --- META ---
 
@@ -69,6 +80,7 @@ CLASS_FIELDS_META(Chip)
 	FIELD().PRIVATE().DEFAULT_VALUE(0.0f).NAME(mFallSpeedMax);
 	FIELD().PRIVATE().DEFAULT_VALUE(0.0f).NAME(mFallAcceleration);
 	FIELD().PRIVATE().DEFAULT_VALUE(0.0f).NAME(mFallSpeed);
+	FIELD().PRIVATE().DEFAULT_VALUE(0.0f).NAME(mAccumulatedFallDistance);
 }
 END_META;
 CLASS_METHODS_META(Chip)
@@ -82,9 +94,15 @@ CLASS_METHODS_META(Chip)
 	FUNCTION().PUBLIC().SIGNATURE(State, GetState);
 	FUNCTION().PUBLIC().SIGNATURE(void, SetCell, Cell*);
 	FUNCTION().PUBLIC().SIGNATURE(Cell*, GetCell);
+	FUNCTION().PUBLIC().SIGNATURE(bool, IsFalling);
+	FUNCTION().PUBLIC().SIGNATURE(void, CheckFallingDown);
+	FUNCTION().PUBLIC().SIGNATURE(void, CheckFallingSide);
+	FUNCTION().PUBLIC().SIGNATURE(void, UpdateFallingStep1, float);
+	FUNCTION().PUBLIC().SIGNATURE(void, UpdateFallingStep2, float);
 	FUNCTION().PRIVATE().SIGNATURE(void, UpdateFalling, float);
-	FUNCTION().PRIVATE().SIGNATURE(void, CheckFallDown);
-	FUNCTION().PRIVATE().SIGNATURE(void, UpdateStanding, float);
+	FUNCTION().PRIVATE().SIGNATURE(void, ContinueFalling);
+	FUNCTION().PRIVATE().SIGNATURE(void, StopFalling);
+	FUNCTION().PRIVATE().SIGNATURE(void, UpdateSwapping, float);
 }
 END_META;
 // --- END META ---

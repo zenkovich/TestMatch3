@@ -112,6 +112,48 @@ bool Cell::IsUnderPoint(const Vec2F& point)
 	return GetOwnerActor()->transform->worldBasis.Get().IsPointInside(point);
 }
 
+void Cell::OnCursorPressed(const Input::Cursor& cursor)
+{
+
+}
+
+void Cell::OnCursorExit(const Input::Cursor& cursor)
+{
+	if (!mChip)
+		return;
+
+	if (mIsPressed)
+	{
+		Vec2F delta = cursor.position - GetOwnerActor()->transform->worldPosition;
+		if (Math::Abs(delta.x) > Math::Abs(delta.y))
+		{
+			if (delta.x < 0)
+			{
+				if (mNeighborLeft && mNeighborLeft->GetChip())
+					mGamefield->SwapChips(this, mNeighborLeft);
+			}
+			else
+			{
+				if (mNeighborRight && mNeighborRight->GetChip())
+					mGamefield->SwapChips(this, mNeighborRight);
+			}
+		}
+		else
+		{
+			if (delta.y < 0)
+			{
+				if (mNeighborDown && mNeighborDown->GetChip())
+					mGamefield->SwapChips(this, mNeighborDown);
+			}
+			else
+			{
+				if (mNeighborTop && mNeighborTop->GetChip())
+					mGamefield->SwapChips(this, mNeighborTop);
+			}
+		}
+	}
+}
+
 void Cell::OnCursorRightMouseReleased(const Input::Cursor& cursor)
 {
 	if (mChip)
