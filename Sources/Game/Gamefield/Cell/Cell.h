@@ -10,60 +10,84 @@ using namespace o2;
 
 class Gamefield;
 
+// --------------------------------------------
+// Gamefield cell. Contains chip and behaviours
+// --------------------------------------------
 class Cell : public DrawableComponent, public CursorAreaEventsListener
 {
 public:
 	enum class FallAvoidDirection { Left, Right };
 
 public:
+	// Called when cells are created, initializes behaviours
 	void OnStart();
 
+	// Draws content of cell, used to handle events
 	void Draw() override;
 
+	// Process behaviours
 	void Process(float dt);
 
+	// Sets gamefield for cell
 	void SetGamefield(Gamefield* gamefield);
 
+	// Sets chip for cell. Can reset position of chip to center
 	void SetChip(const Ref<Chip>& chip, bool resetPosition = true);
+
+	// Returns chip of cell
 	const Ref<Chip>& GetChip() const;
 
+	// Adds behaviour to cell
 	void AddBehaviour(Ref<CellBehaviour>& behaviour);
+
+	// Removes behaviour from cell
 	void RemoveBehaviour(const Ref<CellBehaviour>& behaviour);
 
+	// Sets neighbor cells
 	void SetNeighborLeft(Cell* neighbor);
 	void SetNeighborRight(Cell* neighbor);
 	void SetNeighborTop(Cell* neighbor);
 	void SetNeighborDown(Cell* neighbor);
 
+	// Returns neighbor cells
 	Cell* GetNeighborLeft() const;
 	Cell* GetNeighborRight() const;
 	Cell* GetNeighborTop() const;
 	Cell* GetNeighborDown() const;
 
+	// Returns current avoid direction
 	FallAvoidDirection GetFallAvoidDirection() const;
+
+	// Swaps avoid direction from left to right and vice versa
 	void SwapFallAvoidDirection();
 
+	// Returns true if cell is under point
 	bool IsUnderPoint(const Vec2F& point) override;
+
+	// Returns category of component
+	static String GetCategory() { return "Gamefield"; }
 
 	SERIALIZABLE(Cell);
 
 private:
 	Gamefield* mGamefield = nullptr;
 
-	Ref<Chip> mChip; // @EDITOR_PROPERTY
+	Ref<Chip> mChip; // Containing chip @EDITOR_PROPERTY
 
-	Cell* mNeighborLeft = nullptr;  // @EDITOR_PROPERTY
-	Cell* mNeighborRight = nullptr; // @EDITOR_PROPERTY
-	Cell* mNeighborTop = nullptr;   // @EDITOR_PROPERTY
-	Cell* mNeighborDown = nullptr;  // @EDITOR_PROPERTY
+	Cell* mNeighborLeft = nullptr;  // Left cached neighbor @EDITOR_PROPERTY
+	Cell* mNeighborRight = nullptr; // Right cached neighbor @EDITOR_PROPERTY
+	Cell* mNeighborTop = nullptr;   // Top cached neighbor @EDITOR_PROPERTY
+	Cell* mNeighborDown = nullptr;  // Down cached neighbor @EDITOR_PROPERTY
 
-	Vector<Ref<CellBehaviour>> mBehaviours; // @EDITOR_PROPERTY
+	Vector<Ref<CellBehaviour>> mBehaviours; // List of behaviours @EDITOR_PROPERTY
 
-	FallAvoidDirection mAvoidDirection = FallAvoidDirection::Left; // @EDITOR_PROPERTY
+	FallAvoidDirection mAvoidDirection = FallAvoidDirection::Left; // Current fall avoid direction @EDITOR_PROPERTY
 
 private:
-	void OnCursorPressed(const Input::Cursor& cursor) override;
+	// Called when cursor exits from cell area
 	void OnCursorExit(const Input::Cursor& cursor) override;
+
+	// Called when cursor enters cell area
 	void OnCursorRightMouseReleased(const Input::Cursor& cursor) override;
 };
 // --- META ---
@@ -110,7 +134,7 @@ CLASS_METHODS_META(Cell)
 	FUNCTION().PUBLIC().SIGNATURE(FallAvoidDirection, GetFallAvoidDirection);
 	FUNCTION().PUBLIC().SIGNATURE(void, SwapFallAvoidDirection);
 	FUNCTION().PUBLIC().SIGNATURE(bool, IsUnderPoint, const Vec2F&);
-	FUNCTION().PRIVATE().SIGNATURE(void, OnCursorPressed, const Input::Cursor&);
+	FUNCTION().PUBLIC().SIGNATURE_STATIC(String, GetCategory);
 	FUNCTION().PRIVATE().SIGNATURE(void, OnCursorExit, const Input::Cursor&);
 	FUNCTION().PRIVATE().SIGNATURE(void, OnCursorRightMouseReleased, const Input::Cursor&);
 }

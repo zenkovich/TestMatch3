@@ -121,8 +121,6 @@
                                     "path": "Prefabs/VioletChip.proto"
                                 }
                             ],
-                            "mChipsFallingMaxSpeed": 3000.0,
-                            "mChipsFallingAcceleration": 5000.0,
                             "mCellSize": {
                                 "x": 100.0,
                                 "y": 100.0
@@ -135,6 +133,20 @@
                                 "path": "Prefabs/Cell.proto"
                             },
                             "mId": 6193086113682722973
+                        }
+                    },
+                    {
+                        "Type": "ChipsFallGamefieldBehaviour",
+                        "Data": {
+                            "mChipsFallingMaxSpeed": 3000.0,
+                            "mChipsFallingAcceleration": 3000.0,
+                            "mId": 3484778268637272696
+                        }
+                    },
+                    {
+                        "Type": "CheckMatchesGamefieldBehaviour",
+                        "Data": {
+                            "mId": 10080906635517812771
                         }
                     }
                 ]

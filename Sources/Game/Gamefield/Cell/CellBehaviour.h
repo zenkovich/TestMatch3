@@ -13,6 +13,9 @@ public:
 	void SetCell(Cell* cell);
 	virtual void Process(float dt) {}
 
+	// Returns category of component
+	static String GetCategory() { return "Gamefield"; }
+
 	SERIALIZABLE(CellBehaviour);
 
 protected:
@@ -35,6 +38,7 @@ CLASS_METHODS_META(CellBehaviour)
 
 	FUNCTION().PUBLIC().SIGNATURE(void, SetCell, Cell*);
 	FUNCTION().PUBLIC().SIGNATURE(void, Process, float);
+	FUNCTION().PUBLIC().SIGNATURE_STATIC(String, GetCategory);
 }
 END_META;
 // --- END META ---

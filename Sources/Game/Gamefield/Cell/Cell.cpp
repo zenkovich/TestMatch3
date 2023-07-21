@@ -112,11 +112,6 @@ bool Cell::IsUnderPoint(const Vec2F& point)
 	return GetOwnerActor()->transform->worldBasis.Get().IsPointInside(point);
 }
 
-void Cell::OnCursorPressed(const Input::Cursor& cursor)
-{
-
-}
-
 void Cell::OnCursorExit(const Input::Cursor& cursor)
 {
 	if (!mChip)

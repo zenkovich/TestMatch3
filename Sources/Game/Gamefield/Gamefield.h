@@ -7,56 +7,72 @@
 
 using namespace o2;
 
+// -------------------------------------------------------------------------
+// Match3 gamefield. Contains cells and chips. Updates whole gamefield logic
+// -------------------------------------------------------------------------
 class Gamefield : public Component
 {
 public:
+	// Called at start, generates new field
 	void OnStart() override;
+
+	// Updates logic
 	void Update(float dt) override;
 
-	void SwapChips(Cell* cellA, Cell* cellB);
+	// Returns field size
+	Vec2I GetFieldSize() const;
 
-	void CheckMatches();
-
+	// Returns cell
 	Ref<Cell> GetCell(int x, int y) const;
 
+	// Swaps chips in cells
+	void SwapChips(Cell* cellA, Cell* cellB);
+
+	// Destroys chip
 	void DestroyChip(Ref<Chip>& chip);
+
+	// List all chips with function
+	void ForEachChip(const Function<void(Chip* chip, int x, int y)>& func);
+
+	// Returns category of component
+	static String GetCategory() { return "Gamefield"; }
 
 	SERIALIZABLE(Gamefield);
 
 private:
-	Vector<ActorAssetRef> mChipProtos; // @SERIALIZABLE @EDITOR_PROPERTY
+	Vector<ActorAssetRef> mChipProtos; // List of available chips prototypes @SERIALIZABLE @EDITOR_PROPERTY
 
-	int mFieldMinSize = 3; // @SERIALIZABLE @EDITOR_PROPERTY
-	int mFieldMaxSize = 10; // @SERIALIZABLE @EDITOR_PROPERTY
+	int mFieldMinSize = 3;  // Field minimal size @SERIALIZABLE @EDITOR_PROPERTY
+	int mFieldMaxSize = 10; // Field max size @SERIALIZABLE @EDITOR_PROPERTY
 
-	float mChipsFallingMaxSpeed = 10.0f; // @SERIALIZABLE @EDITOR_PROPERTY
-	float mChipsFallingAcceleration = 10.0f; // @SERIALIZABLE @EDITOR_PROPERTY
+	Vec2F         mCellSize;       // Size of one cell @SERIALIZABLE @EDITOR_PROPERTY
+	ActorRef      mCellsContainer; // Cells objects container @SERIALIZABLE @EDITOR_PROPERTY
+	ActorAssetRef mCellProto;      // Cell prototype @SERIALIZABLE @EDITOR_PROPERTY
 
-	Vec2F         mCellSize;       // @SERIALIZABLE @EDITOR_PROPERTY
-	ActorRef      mCellsContainer; // @SERIALIZABLE @EDITOR_PROPERTY
-	ActorAssetRef mCellProto;      // @SERIALIZABLE @EDITOR_PROPERTY
+	Vector<Ref<ChipSpawner>> mChipSpawners; // Chip spawners list @EDITOR_PROPERTY
 
-	Vector<Ref<ChipSpawner>> mChipSpawners; // @EDITOR_PROPERTY
+	Vector<Ref<GamefieldBehaviour>> mBehaviours; // List of field behaviours @EDITOR_PROPERTY
 
-	Vector<Ref<GamefieldBehaviour>> mBehaviours; // @SERIALIZABLE @EDITOR_PROPERTY
+	int mFieldWidth = 0;  // Generated field width @EDITOR_PROPERTY
+	int mFieldHeigth = 0; // Generated field height @EDITOR_PROPERTY
 
-	int mFieldWidth = 0; // @EDITOR_PROPERTY
-	int mFieldHeigth = 0; // @EDITOR_PROPERTY
+	Vector<Vector<Ref<Cell>>> mCells; // List of cell of field @EDITOR_PROPERTY
+	Vector<Ref<Chip>>         mChips; // List of chils on field @EDITOR_PROPERTY
 
-	Vector<Vector<Ref<Cell>>> mCells; // @EDITOR_PROPERTY
-	Vector<Ref<Chip>>         mChips; // @EDITOR_PROPERTY
-
-	Map<Chip::Color, Vector<Ref<Chip>>> mChipsByColor; // @EDITOR_PROPERTY
+	Map<ChipColor, Vector<Ref<Chip>>> mChipsByColor; // Chips sorted by color @EDITOR_PROPERTY
 
 private:
+	// Gets list of field behaviours, initializes them
+	void InitializeBehaviours();
+
+	// Generates new field with size
 	void GenerateField(int width, int heigth);
 
+	// Updates spawn
 	void UpdateSpawn();
-	void UpdateFalling(float dt);
 
-	void ForEachChip(const Function<void(Chip* chip, int x, int y)>& func);
-
-	void FindChipsMatch(const Vec2I& pos, const Vec2I& dir, RectI& bounds, Vector<Chip*>& chips, Chip::Color color);
+	// Returns random chip prototype for spawn
+	ActorAssetRef GetSpawnPrototype() const;
 };
 // --- META ---
 
@@ -70,13 +86,11 @@ CLASS_FIELDS_META(Gamefield)
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().SERIALIZABLE_ATTRIBUTE().NAME(mChipProtos);
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().SERIALIZABLE_ATTRIBUTE().DEFAULT_VALUE(3).NAME(mFieldMinSize);
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().SERIALIZABLE_ATTRIBUTE().DEFAULT_VALUE(10).NAME(mFieldMaxSize);
-	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().SERIALIZABLE_ATTRIBUTE().DEFAULT_VALUE(10.0f).NAME(mChipsFallingMaxSpeed);
-	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().SERIALIZABLE_ATTRIBUTE().DEFAULT_VALUE(10.0f).NAME(mChipsFallingAcceleration);
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().SERIALIZABLE_ATTRIBUTE().NAME(mCellSize);
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().SERIALIZABLE_ATTRIBUTE().NAME(mCellsContainer);
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().SERIALIZABLE_ATTRIBUTE().NAME(mCellProto);
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().NAME(mChipSpawners);
-	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().SERIALIZABLE_ATTRIBUTE().NAME(mBehaviours);
+	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().NAME(mBehaviours);
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().DEFAULT_VALUE(0).NAME(mFieldWidth);
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().DEFAULT_VALUE(0).NAME(mFieldHeigth);
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().NAME(mCells);
@@ -91,15 +105,16 @@ CLASS_METHODS_META(Gamefield)
 
 	FUNCTION().PUBLIC().SIGNATURE(void, OnStart);
 	FUNCTION().PUBLIC().SIGNATURE(void, Update, float);
-	FUNCTION().PUBLIC().SIGNATURE(void, SwapChips, Cell*, Cell*);
-	FUNCTION().PUBLIC().SIGNATURE(void, CheckMatches);
+	FUNCTION().PUBLIC().SIGNATURE(Vec2I, GetFieldSize);
 	FUNCTION().PUBLIC().SIGNATURE(Ref<Cell>, GetCell, int, int);
+	FUNCTION().PUBLIC().SIGNATURE(void, SwapChips, Cell*, Cell*);
 	FUNCTION().PUBLIC().SIGNATURE(void, DestroyChip, Ref<Chip>&);
+	FUNCTION().PUBLIC().SIGNATURE(void, ForEachChip, _tmp1);
+	FUNCTION().PUBLIC().SIGNATURE_STATIC(String, GetCategory);
+	FUNCTION().PRIVATE().SIGNATURE(void, InitializeBehaviours);
 	FUNCTION().PRIVATE().SIGNATURE(void, GenerateField, int, int);
 	FUNCTION().PRIVATE().SIGNATURE(void, UpdateSpawn);
-	FUNCTION().PRIVATE().SIGNATURE(void, UpdateFalling, float);
-	FUNCTION().PRIVATE().SIGNATURE(void, ForEachChip, _tmp1);
-	FUNCTION().PRIVATE().SIGNATURE(void, FindChipsMatch, const Vec2I&, const Vec2I&, RectI&, Vector<Chip*>&, Chip::Color);
+	FUNCTION().PRIVATE().SIGNATURE(ActorAssetRef, GetSpawnPrototype);
 }
 END_META;
 // --- END META ---

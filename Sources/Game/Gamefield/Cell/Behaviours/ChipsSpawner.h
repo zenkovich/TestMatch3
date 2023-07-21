@@ -3,11 +3,20 @@
 
 using namespace o2;
 
+// ---------------------
+// Spawns chip into cell
+// ---------------------
 class ChipSpawner : public CellBehaviour
 {
 public:
+	// Returns true if can spawn chip, that means that cell is empty
 	bool CanSpawn() const;
+
+	// Spawns chip into cell
 	Ref<Chip> SpawnChip(const ActorAssetRef& proto);
+
+	// Returns category of component
+	static String GetCategory() { return "Gamefield"; }
 
 	SERIALIZABLE(ChipSpawner);
 };
@@ -27,6 +36,7 @@ CLASS_METHODS_META(ChipSpawner)
 
 	FUNCTION().PUBLIC().SIGNATURE(bool, CanSpawn);
 	FUNCTION().PUBLIC().SIGNATURE(Ref<Chip>, SpawnChip, const ActorAssetRef&);
+	FUNCTION().PUBLIC().SIGNATURE_STATIC(String, GetCategory);
 }
 END_META;
 // --- END META ---

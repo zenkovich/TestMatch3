@@ -5,8 +5,17 @@
 
 void Gamefield::OnStart()
 {
+	InitializeBehaviours();
+
 	GenerateField(Math::Random(mFieldMinSize, mFieldMaxSize), 
 				  Math::Random(mFieldMinSize, mFieldMaxSize));
+}
+
+void Gamefield::InitializeBehaviours()
+{
+	mBehaviours = GetOwnerActor()->GetComponents<GamefieldBehaviour>().Cast<Ref<GamefieldBehaviour>>();
+	for (auto& behaviour : mBehaviours)
+		behaviour->SetGamefield(this);
 }
 
 void Gamefield::Update(float dt)
@@ -24,8 +33,11 @@ void Gamefield::Update(float dt)
 	}
 
 	UpdateSpawn();
-	UpdateFalling(dt);
-	CheckMatches();
+}
+
+Vec2I Gamefield::GetFieldSize() const
+{
+	return Vec2I(mFieldWidth, mFieldHeigth);
 }
 
 void Gamefield::SwapChips(Cell* cellA, Cell* cellB)
@@ -59,6 +71,7 @@ void Gamefield::GenerateField(int width, int heigth)
 {
 	Vec2F fieldSize = Vec2F(width, heigth) * mCellSize;
 
+	// Generate cells and spawners at top
 	for (int x = 0; x < width; x++)
 	{
 		float xCenter = x*mCellSize.x - fieldSize.x/2.0f + mCellSize.x/2.0f;
@@ -77,6 +90,9 @@ void Gamefield::GenerateField(int width, int heigth)
 
 			newCell->SetGamefield(this);
 
+			for (auto& beh : mBehaviours)
+				beh->OnCellCreated(newCell);
+
 			if (y == 0)
 			{
 				auto spawner = Ref<ChipSpawner>(newCellActor->AddComponent<ChipSpawner>());
@@ -88,6 +104,7 @@ void Gamefield::GenerateField(int width, int heigth)
 		}
 	}
 
+	// Map cells neighbors
 	for (int x = 0; x < width; x++)
 	{
 		for (int y = 0; y < heigth; y++)
@@ -115,50 +132,25 @@ void Gamefield::UpdateSpawn()
 		if (!spawner->CanSpawn())
 			continue;
 
-		auto& chipProto = mChipProtos[Math::Random(0, mChipProtos.Count())];
+		auto chipProto = GetSpawnPrototype();
 		auto newChip = spawner->SpawnChip(chipProto);
-
-		newChip->SetFallSpeed(mChipsFallingMaxSpeed, mChipsFallingAcceleration);
 
 		mChips.Add(newChip);
 		mChipsByColor[newChip->GetColor()].Add(newChip);
+
+		for (auto& beh : mBehaviours)
+			beh->OnChipCreated(newChip.Get());
 	}
 }
 
-void Gamefield::UpdateFalling(float dt)
+ActorAssetRef Gamefield::GetSpawnPrototype() const
 {
-	ForEachChip([&](Chip* chip, int x, int y)
-				{
-					if (!chip->IsFalling())
-						return;
-
-					chip->UpdateFallingStep1(dt);
-				});
-
-	ForEachChip([&](Chip* chip, int x, int y)
-				{
-					if (chip->GetState() == Chip::State::Standing || chip->GetState() == Chip::State::CheckFallingNext)
-						chip->CheckFallingDown();
-				});
-
-	ForEachChip([&](Chip* chip, int x, int y)
-				{
-					if (chip->GetState() == Chip::State::Standing || chip->GetState() == Chip::State::CheckFallingNext)
-						chip->CheckFallingSide();
-				});
-
-	ForEachChip([&](Chip* chip, int x, int y)
-				{
-					if (!chip->IsFalling())
-						return;
-
-					chip->UpdateFallingStep2(dt);
-				});
+	// Simple randomly select prototype
+	return mChipProtos[Math::Random(0, mChipProtos.Count())];
 }
 
 void Gamefield::ForEachChip(const Function<void(Chip* chip, int x, int y)>& func)
 {
-
 	for (int x = 0; x < mFieldWidth; x++)
 	{
 		for (int y = mFieldHeigth - 1; y >= 0; y--)
@@ -170,78 +162,6 @@ void Gamefield::ForEachChip(const Function<void(Chip* chip, int x, int y)>& func
 			func(chip.Get(), x, y);
 		}
 	}
-}
-
-
-void Gamefield::CheckMatches()
-{
-	while (true)
-	{
-		bool foundMatch = false;
-		Vector<Chip*> biggestMatch;
-		int biggestMatchSizeSum = 0;
-
-		Vector<Chip*> chipsToCheck;
-		for (int x = 0; x < mFieldWidth; x++)
-		{
-			for (int y = 0; y < mFieldHeigth; y++)
-			{
-				auto chip = mCells[x][y]->GetChip();
-				if (!chip || chip->GetState() != Chip::State::Standing)
-					continue;
-
-				chipsToCheck.Clear();
-				chipsToCheck.Add(chip.Get());
-				RectI bounds(x, y, x, y);
-
-				FindChipsMatch(Vec2I(x, y), Vec2I(1, 0), bounds, chipsToCheck, chip->GetColor());
-				FindChipsMatch(Vec2I(x, y), Vec2I(0, 1), bounds, chipsToCheck, chip->GetColor());
-				FindChipsMatch(Vec2I(x, y), Vec2I(-1, 0), bounds, chipsToCheck, chip->GetColor());
-				FindChipsMatch(Vec2I(x, y), Vec2I(0, -1), bounds, chipsToCheck, chip->GetColor());
-
-				if (bounds.Width() + 1 >= 3 || bounds.Height() + 1 >= 3)
-				{
-					int sizeSum = bounds.Width() + bounds.Height();
-					if (sizeSum > biggestMatchSizeSum)
-					{
-						biggestMatchSizeSum = sizeSum;
-						biggestMatch = chipsToCheck;
-					}
-
-					foundMatch = true;
-				}
-			}
-		}
-
-		if (!foundMatch)
-			break;
-
-		for (auto chip : biggestMatch)
-		{
-			auto refChip = Ref<Chip>(chip);
-			DestroyChip(refChip);
-		}
-	}
-}
-
-void Gamefield::FindChipsMatch(const Vec2I& pos, const Vec2I& dir, RectI& bounds, Vector<Chip*>& chips, Chip::Color color)
-{
-	Vec2I newPos = pos + dir;
-	if (newPos.x < 0 || newPos.x >= mFieldWidth || newPos.y < 0 || newPos.y >= mFieldHeigth)
-		return;
-
-	auto chip = mCells[newPos.x][newPos.y]->GetChip();
-	if (!chip || chip->GetState() != Chip::State::Standing || chip->GetColor() != color)
-		return;
-
-	chips.Add(chip.Get());
-
-	bounds.left = Math::Min(newPos.x, bounds.left);
-	bounds.right = Math::Max(newPos.x, bounds.right);
-	bounds.top = Math::Max(newPos.y, bounds.top);
-	bounds.bottom = Math::Min(newPos.y, bounds.bottom);
-
-	FindChipsMatch(newPos, dir, bounds, chips, color);
 }
 
 DECLARE_TEMPLATE_CLASS(Ref<Gamefield>);

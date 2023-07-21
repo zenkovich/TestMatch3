@@ -10,6 +10,8 @@
 void Chip::OnStart()
 {
 	mBehaviours = mOwner->GetComponents<ChipBehaviour>().Cast<Ref<ChipBehaviour>>();
+	for (auto& beh : mBehaviours)
+		beh->SetChip(this);
 }
 
 void Chip::Process(float dt)
@@ -29,7 +31,7 @@ void Chip::SetFallSpeed(float maxSpeed, float acceleration)
 	mFallAcceleration = acceleration;
 }
 
-Chip::Color Chip::GetColor() const
+ChipColor Chip::GetColor() const
 {
 	return mColor;
 }
@@ -174,16 +176,6 @@ ENUM_META(Chip::State)
 	ENUM_ENTRY(Falling);
 	ENUM_ENTRY(Standing);
 	ENUM_ENTRY(Swapping);
-}
-END_ENUM_META;
-
-ENUM_META(Chip::Color)
-{
-	ENUM_ENTRY(Blue);
-	ENUM_ENTRY(Green);
-	ENUM_ENTRY(Red);
-	ENUM_ENTRY(Violet);
-	ENUM_ENTRY(Yellow);
 }
 END_ENUM_META;
 
