@@ -69,7 +69,10 @@ void Gamefield::DestroyChip(Ref<Chip>& chip)
 
 void Gamefield::GenerateField(int width, int heigth)
 {
-	Vec2F fieldSize = Vec2F(width, heigth) * mCellSize;
+	Vec2F fieldSize = Vec2F((float)width, (float)heigth) * mCellSize;
+
+	mFieldWidth = width;
+	mFieldHeigth = heigth;
 
 	// Generate cells and spawners at top
 	for (int x = 0; x < width; x++)
@@ -121,8 +124,41 @@ void Gamefield::GenerateField(int width, int heigth)
 		}
 	}
 
-	mFieldWidth = width;
-	mFieldHeigth = heigth;
+	FillFieldWithChips();
+}
+
+void Gamefield::FillFieldWithChips()
+{
+	Vector<ChipColor> availableColors;
+
+	Map<ChipColor, ActorAssetRef> protosByColors;
+	for (auto& proto : mChipProtos)
+	{
+		auto chip = proto->GetActor()->GetComponent<Chip>();
+		protosByColors[chip->GetColor()] = proto;
+	}
+
+	for (int x = 0; x < mFieldWidth; x++)
+	{
+		for (int y = 0; y < mFieldHeigth; y++)
+		{
+			auto cell = mCells[x][y];
+
+			availableColors = { ChipColor::Red, ChipColor::Green, ChipColor::Blue, ChipColor::Yellow, ChipColor::Violet };
+
+			if (cell->GetNeighborLeft())
+				availableColors.Remove(cell->GetNeighborLeft()->GetChip()->GetColor());
+
+			if (cell->GetNeighborTop())
+				availableColors.Remove(cell->GetNeighborTop()->GetChip()->GetColor());
+
+			ChipColor randomColor = availableColors[Math::Random(0, availableColors.Count())];
+			auto& chipProto = protosByColors[randomColor];
+
+			auto newChip = CreateChip(chipProto);
+			cell->SetChip(newChip);
+		}
+	}
 }
 
 void Gamefield::UpdateSpawn()
@@ -133,14 +169,24 @@ void Gamefield::UpdateSpawn()
 			continue;
 
 		auto chipProto = GetSpawnPrototype();
-		auto newChip = spawner->SpawnChip(chipProto);
-
-		mChips.Add(newChip);
-		mChipsByColor[newChip->GetColor()].Add(newChip);
-
-		for (auto& beh : mBehaviours)
-			beh->OnChipCreated(newChip.Get());
+		auto newChip = CreateChip(chipProto);
+		spawner->SpawnChip(newChip);
 	}
+}
+
+Chip* Gamefield::CreateChip(const ActorAssetRef& proto)
+{
+	auto newChip = proto->Instantiate()->GetComponent<Chip>();
+
+	newChip->SetState(Chip::State::Standing);
+
+	mChips.Add(newChip);
+	mChipsByColor[newChip->GetColor()].Add(newChip);
+
+	for (auto& beh : mBehaviours)
+		beh->OnChipCreated(newChip);
+
+	return newChip;
 }
 
 ActorAssetRef Gamefield::GetSpawnPrototype() const

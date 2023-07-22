@@ -68,10 +68,10 @@ private:
 
 	Ref<Chip> mChip; // Containing chip @EDITOR_PROPERTY
 
-	Cell* mNeighborLeft = nullptr;  // Left cached neighbor @EDITOR_PROPERTY
-	Cell* mNeighborRight = nullptr; // Right cached neighbor @EDITOR_PROPERTY
-	Cell* mNeighborTop = nullptr;   // Top cached neighbor @EDITOR_PROPERTY
-	Cell* mNeighborDown = nullptr;  // Down cached neighbor @EDITOR_PROPERTY
+	Cell* mNeighborLeft = nullptr;  // Left cached neighbor
+	Cell* mNeighborRight = nullptr; // Right cached neighbor
+	Cell* mNeighborTop = nullptr;   // Top cached neighbor
+	Cell* mNeighborDown = nullptr;  // Down cached neighbor
 
 	Vector<Ref<CellBehaviour>> mBehaviours; // List of behaviours @EDITOR_PROPERTY
 
@@ -96,10 +96,10 @@ CLASS_FIELDS_META(Cell)
 {
 	FIELD().PRIVATE().DEFAULT_VALUE(nullptr).NAME(mGamefield);
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().NAME(mChip);
-	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().DEFAULT_VALUE(nullptr).NAME(mNeighborLeft);
-	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().DEFAULT_VALUE(nullptr).NAME(mNeighborRight);
-	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().DEFAULT_VALUE(nullptr).NAME(mNeighborTop);
-	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().DEFAULT_VALUE(nullptr).NAME(mNeighborDown);
+	FIELD().PRIVATE().DEFAULT_VALUE(nullptr).NAME(mNeighborLeft);
+	FIELD().PRIVATE().DEFAULT_VALUE(nullptr).NAME(mNeighborRight);
+	FIELD().PRIVATE().DEFAULT_VALUE(nullptr).NAME(mNeighborTop);
+	FIELD().PRIVATE().DEFAULT_VALUE(nullptr).NAME(mNeighborDown);
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().NAME(mBehaviours);
 }
 END_META;

@@ -36,6 +36,7 @@
                     "Type": "Chip",
                     "Data": {
                         "PrototypeLink": 11873778382250684669,
+                        "mColor": "Red",
                         "mId": 14353699713821717702
                     }
                 }

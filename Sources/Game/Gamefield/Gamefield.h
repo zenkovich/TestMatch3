@@ -68,8 +68,14 @@ private:
 	// Generates new field with size
 	void GenerateField(int width, int heigth);
 
+	// Fills gamefield with random chips without matches
+	void FillFieldWithChips();
+
 	// Updates spawn
 	void UpdateSpawn();
+
+	// Creates chip and registers it
+	Chip* CreateChip(const ActorAssetRef& proto);
 
 	// Returns random chip prototype for spawn
 	ActorAssetRef GetSpawnPrototype() const;
@@ -113,7 +119,9 @@ CLASS_METHODS_META(Gamefield)
 	FUNCTION().PUBLIC().SIGNATURE_STATIC(String, GetCategory);
 	FUNCTION().PRIVATE().SIGNATURE(void, InitializeBehaviours);
 	FUNCTION().PRIVATE().SIGNATURE(void, GenerateField, int, int);
+	FUNCTION().PRIVATE().SIGNATURE(void, FillFieldWithChips);
 	FUNCTION().PRIVATE().SIGNATURE(void, UpdateSpawn);
+	FUNCTION().PRIVATE().SIGNATURE(Chip*, CreateChip, const ActorAssetRef&);
 	FUNCTION().PRIVATE().SIGNATURE(ActorAssetRef, GetSpawnPrototype);
 }
 END_META;

@@ -19,7 +19,7 @@ public:
 	SERIALIZABLE(CellBehaviour);
 
 protected:
-	Cell* mCell = nullptr; // @EDITOR_PROPERTY
+	Cell* mCell = nullptr;
 };
 // --- META ---
 
@@ -30,7 +30,7 @@ CLASS_BASES_META(CellBehaviour)
 END_META;
 CLASS_FIELDS_META(CellBehaviour)
 {
-	FIELD().PROTECTED().EDITOR_PROPERTY_ATTRIBUTE().DEFAULT_VALUE(nullptr).NAME(mCell);
+	FIELD().PROTECTED().DEFAULT_VALUE(nullptr).NAME(mCell);
 }
 END_META;
 CLASS_METHODS_META(CellBehaviour)

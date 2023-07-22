@@ -13,7 +13,7 @@ public:
 	bool CanSpawn() const;
 
 	// Spawns chip into cell
-	Ref<Chip> SpawnChip(const ActorAssetRef& proto);
+	void SpawnChip(Chip* chip);
 
 	// Returns category of component
 	static String GetCategory() { return "Gamefield"; }
@@ -35,7 +35,7 @@ CLASS_METHODS_META(ChipSpawner)
 {
 
 	FUNCTION().PUBLIC().SIGNATURE(bool, CanSpawn);
-	FUNCTION().PUBLIC().SIGNATURE(Ref<Chip>, SpawnChip, const ActorAssetRef&);
+	FUNCTION().PUBLIC().SIGNATURE(void, SpawnChip, Chip*);
 	FUNCTION().PUBLIC().SIGNATURE_STATIC(String, GetCategory);
 }
 END_META;
