@@ -78,35 +78,6 @@ void Chip::CheckFallingDown()
 	}
 }
 
-void Chip::CheckFallingSide()
-{
-	auto downCell = mCell->GetNeighborDown();
-	if (!downCell)
-		StopFalling();
-	else
-	{
-		Ref<Cell> fallCell;
-		if (downCell->GetFallAvoidDirection() == Cell::FallAvoidDirection::Left)
-			fallCell = downCell->GetNeighborLeft();
-		else
-			fallCell = downCell->GetNeighborRight();
-
-		downCell->SwapFallAvoidDirection();
-
-		if (fallCell && !fallCell->GetChip())
-		{
-			mCell->SetChip(nullptr);
-			fallCell->SetChip(this, false);
-			mCell = fallCell.Get();
-			ContinueFalling();
-		}
-		else
-		{
-			StopFalling();
-		}
-	}
-}
-
 void Chip::UpdateFallingStep1(float dt)
 {
 	float targetDistance = GetOwnerActor()->transform->GetPosition().Length();

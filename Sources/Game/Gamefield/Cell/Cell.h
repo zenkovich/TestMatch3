@@ -55,12 +55,6 @@ public:
 	Cell* GetNeighborTop() const;
 	Cell* GetNeighborDown() const;
 
-	// Returns current avoid direction
-	FallAvoidDirection GetFallAvoidDirection() const;
-
-	// Swaps avoid direction from left to right and vice versa
-	void SwapFallAvoidDirection();
-
 	// Returns true if cell is under point
 	bool IsUnderPoint(const Vec2F& point) override;
 
@@ -80,8 +74,6 @@ private:
 	Cell* mNeighborDown = nullptr;  // Down cached neighbor @EDITOR_PROPERTY
 
 	Vector<Ref<CellBehaviour>> mBehaviours; // List of behaviours @EDITOR_PROPERTY
-
-	FallAvoidDirection mAvoidDirection = FallAvoidDirection::Left; // Current fall avoid direction @EDITOR_PROPERTY
 
 private:
 	// Called when cursor exits from cell area
@@ -109,7 +101,6 @@ CLASS_FIELDS_META(Cell)
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().DEFAULT_VALUE(nullptr).NAME(mNeighborTop);
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().DEFAULT_VALUE(nullptr).NAME(mNeighborDown);
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().NAME(mBehaviours);
-	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().DEFAULT_VALUE(FallAvoidDirection::Left).NAME(mAvoidDirection);
 }
 END_META;
 CLASS_METHODS_META(Cell)
@@ -131,8 +122,6 @@ CLASS_METHODS_META(Cell)
 	FUNCTION().PUBLIC().SIGNATURE(Cell*, GetNeighborRight);
 	FUNCTION().PUBLIC().SIGNATURE(Cell*, GetNeighborTop);
 	FUNCTION().PUBLIC().SIGNATURE(Cell*, GetNeighborDown);
-	FUNCTION().PUBLIC().SIGNATURE(FallAvoidDirection, GetFallAvoidDirection);
-	FUNCTION().PUBLIC().SIGNATURE(void, SwapFallAvoidDirection);
 	FUNCTION().PUBLIC().SIGNATURE(bool, IsUnderPoint, const Vec2F&);
 	FUNCTION().PUBLIC().SIGNATURE_STATIC(String, GetCategory);
 	FUNCTION().PRIVATE().SIGNATURE(void, OnCursorExit, const Input::Cursor&);

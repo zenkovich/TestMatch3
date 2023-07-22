@@ -22,12 +22,6 @@ void ChipsFallGamefieldBehaviour::Process(float dt)
 
 	mGamefield->ForEachChip([&](Chip* chip, int x, int y)
 				{
-					if (chip->GetState() == Chip::State::Standing || chip->GetState() == Chip::State::CheckFallingNext)
-						chip->CheckFallingSide();
-				});
-
-	mGamefield->ForEachChip([&](Chip* chip, int x, int y)
-				{
 					if (!chip->IsFalling())
 						return;
 

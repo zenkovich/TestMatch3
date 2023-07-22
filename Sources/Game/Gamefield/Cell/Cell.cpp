@@ -94,19 +94,6 @@ Cell* Cell::GetNeighborDown() const
 	return mNeighborDown;
 }
 
-Cell::FallAvoidDirection Cell::GetFallAvoidDirection() const
-{
-	return mAvoidDirection;
-}
-
-void Cell::SwapFallAvoidDirection()
-{
-	if (mAvoidDirection == FallAvoidDirection::Left)
-		mAvoidDirection = FallAvoidDirection::Right;
-	else
-		mAvoidDirection = FallAvoidDirection::Left;
-}
-
 bool Cell::IsUnderPoint(const Vec2F& point)
 {
 	return GetOwnerActor()->transform->worldBasis.Get().IsPointInside(point);

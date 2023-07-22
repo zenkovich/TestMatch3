@@ -47,9 +47,6 @@ public:
 	// Checks if chip can fall down
 	void CheckFallingDown();
 
-	// Checks if chip can fall size
-	void CheckFallingSide();
-
 	// First step of falling, updates speed and current position. Stops at target cells and gets ready for second step
 	void UpdateFallingStep1(float dt);
 
@@ -123,7 +120,6 @@ CLASS_METHODS_META(Chip)
 	FUNCTION().PUBLIC().SIGNATURE(Cell*, GetCell);
 	FUNCTION().PUBLIC().SIGNATURE(bool, IsFalling);
 	FUNCTION().PUBLIC().SIGNATURE(void, CheckFallingDown);
-	FUNCTION().PUBLIC().SIGNATURE(void, CheckFallingSide);
 	FUNCTION().PUBLIC().SIGNATURE(void, UpdateFallingStep1, float);
 	FUNCTION().PUBLIC().SIGNATURE(void, UpdateFallingStep2, float);
 	FUNCTION().PUBLIC().SIGNATURE_STATIC(String, GetCategory);
