@@ -134,6 +134,8 @@ void Chip::UpdateSwapping(float dt)
 	{
 		mState = State::Standing;
 		GetOwnerActor()->transform->position = Vec2F();
+
+		onSwapped();
 	}
 }
 

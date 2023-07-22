@@ -17,6 +17,9 @@ public:
 	enum class State { Standing, Falling, CheckFallingNext, Swapping, Destroying };
 
 public:
+	Function<void()> onSwapped; // Called when chip has been swaped
+
+public:
 	// Called when component is created, collects behaviours
 	void OnStart();
 
@@ -97,6 +100,7 @@ CLASS_BASES_META(Chip)
 END_META;
 CLASS_FIELDS_META(Chip)
 {
+	FIELD().PUBLIC().NAME(onSwapped);
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().SERIALIZABLE_ATTRIBUTE().NAME(mColor);
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().DEFAULT_VALUE(State::Standing).NAME(mState);
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().NAME(mBehaviours);

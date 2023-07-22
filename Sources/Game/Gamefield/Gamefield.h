@@ -26,13 +26,19 @@ public:
 	Ref<Cell> GetCell(int x, int y) const;
 
 	// Swaps chips in cells
-	void SwapChips(Cell* cellA, Cell* cellB);
+	void TrySwapChips(Cell* cellA, Cell* cellB);
+
+	// Checks matches and returns true if matches found
+	bool CheckMatches();
 
 	// Destroys chip
 	void DestroyChip(Ref<Chip>& chip);
 
 	// List all chips with function
 	void ForEachChip(const Function<void(Chip* chip, int x, int y)>& func);
+
+	template<typename _behaviour_type>
+	_behaviour_type* GetBehaviour();
 
 	// Returns category of component
 	static String GetCategory() { return "Gamefield"; }
@@ -61,6 +67,8 @@ private:
 
 	Map<ChipColor, Vector<Ref<Chip>>> mChipsByColor; // Chips sorted by color @EDITOR_PROPERTY
 
+	Vector<Function<void()>> mPostUpdateActions; // List of actions to call after update
+
 private:
 	// Gets list of field behaviours, initializes them
 	void InitializeBehaviours();
@@ -80,6 +88,18 @@ private:
 	// Returns random chip prototype for spawn
 	ActorAssetRef GetSpawnPrototype() const;
 };
+
+template<typename _behaviour_type>
+_behaviour_type* Gamefield::GetBehaviour()
+{
+	for (auto& beh : mBehaviours)
+	{
+		if (auto casted = dynamic_cast<_behaviour_type*>(beh.Get()))
+			return casted;
+	}
+
+	return nullptr;
+}
 // --- META ---
 
 CLASS_BASES_META(Gamefield)
@@ -102,6 +122,7 @@ CLASS_FIELDS_META(Gamefield)
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().NAME(mCells);
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().NAME(mChips);
 	FIELD().PRIVATE().EDITOR_PROPERTY_ATTRIBUTE().NAME(mChipsByColor);
+	FIELD().PRIVATE().NAME(mPostUpdateActions);
 }
 END_META;
 CLASS_METHODS_META(Gamefield)
@@ -113,7 +134,8 @@ CLASS_METHODS_META(Gamefield)
 	FUNCTION().PUBLIC().SIGNATURE(void, Update, float);
 	FUNCTION().PUBLIC().SIGNATURE(Vec2I, GetFieldSize);
 	FUNCTION().PUBLIC().SIGNATURE(Ref<Cell>, GetCell, int, int);
-	FUNCTION().PUBLIC().SIGNATURE(void, SwapChips, Cell*, Cell*);
+	FUNCTION().PUBLIC().SIGNATURE(void, TrySwapChips, Cell*, Cell*);
+	FUNCTION().PUBLIC().SIGNATURE(bool, CheckMatches);
 	FUNCTION().PUBLIC().SIGNATURE(void, DestroyChip, Ref<Chip>&);
 	FUNCTION().PUBLIC().SIGNATURE(void, ForEachChip, _tmp1);
 	FUNCTION().PUBLIC().SIGNATURE_STATIC(String, GetCategory);

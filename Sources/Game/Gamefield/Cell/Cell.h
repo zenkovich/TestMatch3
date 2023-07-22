@@ -35,6 +35,9 @@ public:
 	void SetChip(const Ref<Chip>& chip, bool resetPosition = true);
 
 	// Returns chip of cell
+	Ref<Chip>& GetChip();
+
+	// Returns chip of cell
 	const Ref<Chip>& GetChip() const;
 
 	// Adds behaviour to cell
@@ -111,6 +114,7 @@ CLASS_METHODS_META(Cell)
 	FUNCTION().PUBLIC().SIGNATURE(void, Process, float);
 	FUNCTION().PUBLIC().SIGNATURE(void, SetGamefield, Gamefield*);
 	FUNCTION().PUBLIC().SIGNATURE(void, SetChip, const Ref<Chip>&, bool);
+	FUNCTION().PUBLIC().SIGNATURE(Ref<Chip>&, GetChip);
 	FUNCTION().PUBLIC().SIGNATURE(const Ref<Chip>&, GetChip);
 	FUNCTION().PUBLIC().SIGNATURE(void, AddBehaviour, Ref<CellBehaviour>&);
 	FUNCTION().PUBLIC().SIGNATURE(void, RemoveBehaviour, const Ref<CellBehaviour>&);

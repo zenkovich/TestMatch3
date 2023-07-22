@@ -2,12 +2,13 @@
 #include "Gamefield.h"
 
 #include "o2/Scene/Scene.h"
+#include "Behaviours/CheckMatchesGamefieldBehaviour.h"
 
 void Gamefield::OnStart()
 {
 	InitializeBehaviours();
 
-	GenerateField(Math::Random(mFieldMinSize, mFieldMaxSize), 
+	GenerateField(Math::Random(mFieldMinSize, mFieldMaxSize),
 				  Math::Random(mFieldMinSize, mFieldMaxSize));
 }
 
@@ -33,6 +34,11 @@ void Gamefield::Update(float dt)
 	}
 
 	UpdateSpawn();
+
+	for (auto& action : mPostUpdateActions)
+		action();
+
+	mPostUpdateActions.Clear();
 }
 
 Vec2I Gamefield::GetFieldSize() const
@@ -40,16 +46,41 @@ Vec2I Gamefield::GetFieldSize() const
 	return Vec2I(mFieldWidth, mFieldHeigth);
 }
 
-void Gamefield::SwapChips(Cell* cellA, Cell* cellB)
+void Gamefield::TrySwapChips(Cell* cellA, Cell* cellB)
 {
-	Ref<Chip> chipA = cellA->GetChip();
-	Ref<Chip> chipB = cellB->GetChip();
+	Chip* chipA = cellA->GetChip().Get();
+	Chip* chipB = cellB->GetChip().Get();
 
 	cellA->SetChip(chipB, false);
 	cellB->SetChip(chipA, false);
 
 	chipA->SetState(Chip::State::Swapping);
 	chipB->SetState(Chip::State::Swapping);
+
+	chipA->onSwapped = [=]()
+	{
+		mPostUpdateActions.Add(
+			[=]() {
+				if (!CheckMatches())
+				{
+					cellA->SetChip(chipA, false);
+					cellB->SetChip(chipB, false);
+
+					chipA->SetState(Chip::State::Swapping);
+					chipB->SetState(Chip::State::Swapping);
+
+					chipA->onSwapped.Clear();
+				}
+			});
+	};
+}
+
+bool Gamefield::CheckMatches()
+{
+	if (auto checkMatchesbehaviour = GetBehaviour<CheckMatchesGamefieldBehaviour>())
+		return checkMatchesbehaviour->CheckMatches();
+
+	return false;
 }
 
 Ref<Cell> Gamefield::GetCell(int x, int y) const

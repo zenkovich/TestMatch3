@@ -43,6 +43,11 @@ const Ref<Chip>& Cell::GetChip() const
 	return mChip;
 }
 
+Ref<Chip>& Cell::GetChip()
+{
+	return mChip;
+}
+
 void Cell::AddBehaviour(Ref<CellBehaviour>& behaviour)
 {
 	mBehaviours.Add(behaviour);
@@ -112,12 +117,12 @@ void Cell::OnCursorExit(const Input::Cursor& cursor)
 			if (delta.x < 0)
 			{
 				if (mNeighborLeft && mNeighborLeft->GetChip())
-					mGamefield->SwapChips(this, mNeighborLeft);
+					mGamefield->TrySwapChips(this, mNeighborLeft);
 			}
 			else
 			{
 				if (mNeighborRight && mNeighborRight->GetChip())
-					mGamefield->SwapChips(this, mNeighborRight);
+					mGamefield->TrySwapChips(this, mNeighborRight);
 			}
 		}
 		else
@@ -125,12 +130,12 @@ void Cell::OnCursorExit(const Input::Cursor& cursor)
 			if (delta.y < 0)
 			{
 				if (mNeighborDown && mNeighborDown->GetChip())
-					mGamefield->SwapChips(this, mNeighborDown);
+					mGamefield->TrySwapChips(this, mNeighborDown);
 			}
 			else
 			{
 				if (mNeighborTop && mNeighborTop->GetChip())
-					mGamefield->SwapChips(this, mNeighborTop);
+					mGamefield->TrySwapChips(this, mNeighborTop);
 			}
 		}
 	}
