@@ -7,9 +7,6 @@
 void Gamefield::OnStart()
 {
 	InitializeBehaviours();
-
-	GenerateField(Math::Random(mFieldMinSize, mFieldMaxSize),
-				  Math::Random(mFieldMinSize, mFieldMaxSize));
 }
 
 void Gamefield::InitializeBehaviours()
@@ -81,6 +78,31 @@ bool Gamefield::CheckMatches()
 		return checkMatchesbehaviour->CheckMatches();
 
 	return false;
+}
+
+void Gamefield::DestroyField()
+{
+	for (auto& chip : mChips)
+		o2Scene.DestroyActor(chip->GetOwnerActor());
+
+	for (auto& cellsRow : mCells)
+	{
+		for (auto& cell : cellsRow)
+			o2Scene.DestroyActor(cell->GetOwnerActor());
+	}
+
+	mChips.Clear();
+	mChipsByColor.Clear();
+	mCells.Clear();
+	mChipSpawners.Clear();
+	mPostUpdateActions.Clear();
+}
+
+void Gamefield::Restart()
+{
+	DestroyField();
+	GenerateField(Math::Random(mFieldMinSize, mFieldMaxSize),
+				  Math::Random(mFieldMinSize, mFieldMaxSize));
 }
 
 Ref<Cell> Gamefield::GetCell(int x, int y) const

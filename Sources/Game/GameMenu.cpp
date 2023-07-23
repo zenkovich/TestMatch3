@@ -23,6 +23,7 @@ void GameMenu::Hide()
 void GameMenu::OnRestartPressed()
 {
 	mGameManager->RestartGame();
+	Hide();
 }
 
 void GameMenu::OnExitPressed()

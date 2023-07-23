@@ -5,11 +5,13 @@ void GameManager::OnStart()
 {
 	mMenu->SetGameManager(this);
 	mMenu->Hide();
+
+	mGamefield->Restart();
 }
 
 void GameManager::RestartGame()
 {
-
+	mGamefield->Restart();
 }
 // --- META ---
 

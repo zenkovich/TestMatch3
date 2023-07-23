@@ -31,6 +31,12 @@ public:
 	// Checks matches and returns true if matches found
 	bool CheckMatches();
 
+	// Destroys all field
+	void DestroyField();
+
+	// Generates new field
+	void Restart();
+
 	// Destroys chip
 	void DestroyChip(Ref<Chip>& chip);
 
@@ -136,6 +142,8 @@ CLASS_METHODS_META(Gamefield)
 	FUNCTION().PUBLIC().SIGNATURE(Ref<Cell>, GetCell, int, int);
 	FUNCTION().PUBLIC().SIGNATURE(void, TrySwapChips, Cell*, Cell*);
 	FUNCTION().PUBLIC().SIGNATURE(bool, CheckMatches);
+	FUNCTION().PUBLIC().SIGNATURE(void, DestroyField);
+	FUNCTION().PUBLIC().SIGNATURE(void, Restart);
 	FUNCTION().PUBLIC().SIGNATURE(void, DestroyChip, Ref<Chip>&);
 	FUNCTION().PUBLIC().SIGNATURE(void, ForEachChip, _tmp1);
 	FUNCTION().PUBLIC().SIGNATURE_STATIC(String, GetCategory);
