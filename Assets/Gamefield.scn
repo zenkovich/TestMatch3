@@ -3,7 +3,12 @@
         {
             "mName": "Default"
         },
-        null
+        {
+            "mName": "Gamefield"
+        },
+        {
+            "mName": "UI"
+        }
     ],
     "DefaultLayer": "Default",
     "Tags": null,
@@ -147,6 +152,600 @@
                         "Type": "CheckMatchesGamefieldBehaviour",
                         "Data": {
                             "mId": 10080906635517812771
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::Button",
+            "Value": {
+                "mName": "Options",
+                "onClick": [
+                    {
+                        "type": "ActorFunction",
+                        "component": {
+                            "ActorID": 4933920305873090738,
+                            "ComponentId": 7785265942034566915
+                        },
+                        "func": "Show"
+                    }
+                ],
+                "Id": 8128366267468212333,
+                "Transform": {
+                    "anchorMin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "anchorMax": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "offsetMin": {
+                        "x": 281.76483154296877,
+                        "y": 693.7243041992188
+                    },
+                    "offsetMax": {
+                        "x": 474.76483154296877,
+                        "y": 872.7243041992188
+                    }
+                },
+                "InternalWidgets": [],
+                "Layers": [
+                    {
+                        "Type": "o2::WidgetLayer",
+                        "Value": {
+                            "name": "Sprite",
+                            "mDrawable": {
+                                "Type": "o2::Sprite",
+                                "Value": {
+                                    "mImageAsset": {
+                                        "id": "71a33ea033121f9154050a1d49753e23",
+                                        "path": "Game field/UI/Settings button.png"
+                                    }
+                                }
+                            },
+                            "mUID": 9212193917656956350
+                        }
+                    }
+                ],
+                "States": [
+                    {
+                        "Type": "o2::WidgetState",
+                        "Value": {
+                            "name": "pressed",
+                            "mAnimation": {
+                                "instance": {
+                                    "Type": "o2::AnimationAsset",
+                                    "Value": {
+                                        "animation": {
+                                            "mTracks": [
+                                                {
+                                                    "Type": "o2::AnimationTrack<float>",
+                                                    "Value": {
+                                                        "path": "layer/Sprite/drawable/scaleX",
+                                                        "curve": {
+                                                            "mKeys": [
+                                                                {
+                                                                    "uid": 17578683433121239950,
+                                                                    "value": 1.0,
+                                                                    "rightSupportValue": -0.09999999403953552,
+                                                                    "rightSupportPosition": 0.05000501126050949
+                                                                },
+                                                                {
+                                                                    "uid": 6948666447961234667,
+                                                                    "value": 0.800000011920929,
+                                                                    "position": 0.10001002252101898,
+                                                                    "leftSupportValue": 0.09999999403953552,
+                                                                    "leftSupportPosition": -0.05000501126050949
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "Type": "o2::AnimationTrack<float>",
+                                                    "Value": {
+                                                        "path": "layer/Sprite/drawable/scaleY",
+                                                        "curve": {
+                                                            "mKeys": [
+                                                                {
+                                                                    "uid": 14613367628339452834,
+                                                                    "value": 1.0,
+                                                                    "rightSupportValue": -0.09999999403953552,
+                                                                    "rightSupportPosition": 0.05000501126050949
+                                                                },
+                                                                {
+                                                                    "uid": 13883963939086869012,
+                                                                    "value": 0.800000011920929,
+                                                                    "position": 0.10001002252101898,
+                                                                    "leftSupportValue": 0.09999999403953552,
+                                                                    "leftSupportPosition": -0.05000501126050949
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "mDuration": 0.10001002252101898
+                                        }
+                                    }
+                                },
+                                "meta": {
+                                    "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
+                                    "Value": {
+                                        "mId": "43a73611715f26f20afd2bde7f6c6df9"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::Widget",
+            "Value": {
+                "mName": "Menu",
+                "mLayerName": "UI",
+                "Id": 4933920305873090738,
+                "Transform": {
+                    "anchorMin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "anchorMax": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "offsetMin": {
+                        "x": -323.3692321777344,
+                        "y": -319.9999694824219
+                    },
+                    "offsetMax": {
+                        "x": 323.6307678222656,
+                        "y": 310.0000305175781
+                    }
+                },
+                "Children": [
+                    {
+                        "Data": {
+                            "mName": "HeaderLabel",
+                            "Id": 8039159638645513011,
+                            "Transform": {
+                                "anchorMin": {
+                                    "x": 0.0,
+                                    "y": 1.0
+                                },
+                                "anchorMax": {
+                                    "x": 1.0,
+                                    "y": 1.0000008344650269
+                                },
+                                "offsetMin": {
+                                    "x": 0.0,
+                                    "y": -174.0
+                                },
+                                "offsetMax": {
+                                    "x": 0.0,
+                                    "y": -0.0009765625
+                                }
+                            },
+                            "InternalWidgets": [],
+                            "Layers": [
+                                {
+                                    "Type": "o2::WidgetLayer",
+                                    "Value": {
+                                        "name": "text",
+                                        "mDrawable": {
+                                            "Type": "o2::Text",
+                                            "Value": {
+                                                "mText": "Menu",
+                                                "mFontAssetId": "2b1c72c43d480e7f20b96b8457073253",
+                                                "mHeight": 45,
+                                                "mSymbolsDistCoef": 1.0,
+                                                "mLinesDistanceCoef": 1.0,
+                                                "mVerAlign": "Middle",
+                                                "mHorAlign": "Middle"
+                                            }
+                                        },
+                                        "mUID": 14780316189872141652
+                                    }
+                                }
+                            ],
+                            "States": []
+                        },
+                        "Type": "o2::Label"
+                    },
+                    {
+                        "Data": {
+                            "Prototype": {
+                                "id": "5632038b736f2a3656630c624ba721c3",
+                                "path": "Prefabs/MenuBtn.proto"
+                            },
+                            "PrototypeLink": 11979043947860913986,
+                            "Id": 8493916462987383845,
+                            "mName": "ReloadBtn",
+                            "onClick": [
+                                {
+                                    "type": "ActorFunction",
+                                    "component": {
+                                        "ActorID": 4933920305873090738,
+                                        "ComponentId": 7785265942034566915
+                                    },
+                                    "func": "OnRestartPressed"
+                                }
+                            ],
+                            "Layers": [
+                                {
+                                    "name": "Back",
+                                    "mDrawable": {
+                                        "Type": "o2::Sprite",
+                                        "Value": {
+                                            "mImageAsset": {
+                                                "id": "0a1e49a86ca1206c6d45581205ca100b",
+                                                "path": "Game field/UI/GreenCounterBack.png"
+                                            },
+                                            "mMode": "Sliced",
+                                            "mSlices": {
+                                                "left": 43,
+                                                "bottom": 37,
+                                                "right": 43,
+                                                "top": 44
+                                            }
+                                        }
+                                    },
+                                    "mUID": 1108135202052802592
+                                },
+                                {
+                                    "name": "Text",
+                                    "mDrawable": {
+                                        "Type": "o2::Text",
+                                        "Value": {
+                                            "mText": "Reload",
+                                            "mFontAssetId": "2b1c72c43d480e7f20b96b8457073253",
+                                            "mHeight": 40,
+                                            "mSymbolsDistCoef": 1.0,
+                                            "mLinesDistanceCoef": 1.0,
+                                            "mVerAlign": "Middle",
+                                            "mHorAlign": "Middle"
+                                        }
+                                    },
+                                    "mUID": 12866023945867245779
+                                }
+                            ],
+                            "States": [
+                                {
+                                    "name": "pressed",
+                                    "mAnimation": {
+                                        "instance": {
+                                            "Type": "o2::AnimationAsset",
+                                            "Value": {
+                                                "animation": {
+                                                    "mTracks": [
+                                                        {
+                                                            "Type": "o2::AnimationTrack<float>",
+                                                            "Value": {
+                                                                "path": "layer/Back/drawable/scaleX",
+                                                                "curve": {
+                                                                    "mKeys": [
+                                                                        {
+                                                                            "uid": 2535219913761652884,
+                                                                            "value": 1.0,
+                                                                            "rightSupportPosition": 0.08250810205936432,
+                                                                            "supportsType": "Flat"
+                                                                        },
+                                                                        {
+                                                                            "uid": 10023685191679605722,
+                                                                            "value": 0.800000011920929,
+                                                                            "position": 0.16501620411872865,
+                                                                            "leftSupportPosition": -0.08250810205936432,
+                                                                            "supportsType": "Flat"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "Type": "o2::AnimationTrack<float>",
+                                                            "Value": {
+                                                                "path": "layer/Back/drawable/scaleY",
+                                                                "curve": {
+                                                                    "mKeys": [
+                                                                        {
+                                                                            "uid": 2098761868667264940,
+                                                                            "value": 1.0,
+                                                                            "rightSupportPosition": 0.08250810205936432,
+                                                                            "supportsType": "Flat"
+                                                                        },
+                                                                        {
+                                                                            "uid": 17547182093263830306,
+                                                                            "value": 0.800000011920929,
+                                                                            "position": 0.16501620411872865,
+                                                                            "leftSupportPosition": -0.08250810205936432,
+                                                                            "supportsType": "Flat"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    ],
+                                                    "mDuration": 0.16501620411872865
+                                                }
+                                            }
+                                        },
+                                        "meta": {
+                                            "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
+                                            "Value": {
+                                                "mId": "1ea016ea7d4d477f60f139504c403b3d"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "Type": "o2::Button"
+                    },
+                    {
+                        "Data": {
+                            "Prototype": {
+                                "id": "5632038b736f2a3656630c624ba721c3",
+                                "path": "Prefabs/MenuBtn.proto"
+                            },
+                            "PrototypeLink": 11979043947860913986,
+                            "Id": 584182782757307333,
+                            "Transform": {
+                                "offsetMin": {
+                                    "x": 64.0,
+                                    "y": -531.00390625
+                                },
+                                "offsetMax": {
+                                    "x": -61.0,
+                                    "y": -360.0039367675781
+                                }
+                            },
+                            "mName": "CloseBtn",
+                            "onClick": [
+                                {
+                                    "type": "ActorFunction",
+                                    "component": {
+                                        "ActorID": 4933920305873090738,
+                                        "ComponentId": 7785265942034566915
+                                    },
+                                    "func": "OnExitPressed"
+                                }
+                            ],
+                            "Layers": [
+                                {
+                                    "name": "Back",
+                                    "mDrawable": {
+                                        "Type": "o2::Sprite",
+                                        "Value": {
+                                            "mImageAsset": {
+                                                "id": "0a1e49a86ca1206c6d45581205ca100b",
+                                                "path": "Game field/UI/GreenCounterBack.png"
+                                            },
+                                            "mMode": "Sliced",
+                                            "mSlices": {
+                                                "left": 43,
+                                                "bottom": 37,
+                                                "right": 43,
+                                                "top": 44
+                                            }
+                                        }
+                                    },
+                                    "mUID": 14338328800770700086
+                                },
+                                {
+                                    "name": "Text",
+                                    "mDrawable": {
+                                        "Type": "o2::Text",
+                                        "Value": {
+                                            "mText": "Close",
+                                            "mFontAssetId": "2b1c72c43d480e7f20b96b8457073253",
+                                            "mHeight": 40,
+                                            "mSymbolsDistCoef": 1.0,
+                                            "mLinesDistanceCoef": 1.0,
+                                            "mVerAlign": "Middle",
+                                            "mHorAlign": "Middle"
+                                        }
+                                    },
+                                    "mUID": 11897371047027886745
+                                }
+                            ],
+                            "States": [
+                                {
+                                    "name": "pressed",
+                                    "mAnimation": {
+                                        "instance": {
+                                            "Type": "o2::AnimationAsset",
+                                            "Value": {
+                                                "animation": {
+                                                    "mTracks": [
+                                                        {
+                                                            "Type": "o2::AnimationTrack<float>",
+                                                            "Value": {
+                                                                "path": "layer/Back/drawable/scaleX",
+                                                                "curve": {
+                                                                    "mKeys": [
+                                                                        {
+                                                                            "uid": 2535219913761652884,
+                                                                            "value": 1.0,
+                                                                            "rightSupportPosition": 0.08250810205936432,
+                                                                            "supportsType": "Flat"
+                                                                        },
+                                                                        {
+                                                                            "uid": 10023685191679605722,
+                                                                            "value": 0.800000011920929,
+                                                                            "position": 0.16501620411872865,
+                                                                            "leftSupportPosition": -0.08250810205936432,
+                                                                            "supportsType": "Flat"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "Type": "o2::AnimationTrack<float>",
+                                                            "Value": {
+                                                                "path": "layer/Back/drawable/scaleY",
+                                                                "curve": {
+                                                                    "mKeys": [
+                                                                        {
+                                                                            "uid": 2098761868667264940,
+                                                                            "value": 1.0,
+                                                                            "rightSupportPosition": 0.08250810205936432,
+                                                                            "supportsType": "Flat"
+                                                                        },
+                                                                        {
+                                                                            "uid": 17547182093263830306,
+                                                                            "value": 0.800000011920929,
+                                                                            "position": 0.16501620411872865,
+                                                                            "leftSupportPosition": -0.08250810205936432,
+                                                                            "supportsType": "Flat"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    ],
+                                                    "mDuration": 0.16501620411872865
+                                                }
+                                            }
+                                        },
+                                        "meta": {
+                                            "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
+                                            "Value": {
+                                                "mId": "6768654b2f6b18e435c233966d771165"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "Type": "o2::Button"
+                    }
+                ],
+                "Components": [
+                    {
+                        "Type": "GameMenu",
+                        "Data": {
+                            "mId": 7785265942034566915
+                        }
+                    }
+                ],
+                "InternalWidgets": [],
+                "Layers": [
+                    {
+                        "Type": "o2::WidgetLayer",
+                        "Value": {
+                            "name": "Back",
+                            "mDrawable": {
+                                "Type": "o2::Sprite",
+                                "Value": {
+                                    "mImageAsset": {
+                                        "id": "5442554d154328c66b53371c5f57525f",
+                                        "path": "Game field/UI/Button back.png"
+                                    },
+                                    "mMode": "Sliced",
+                                    "mSlices": {
+                                        "left": 142,
+                                        "bottom": 174,
+                                        "right": 153,
+                                        "top": 107
+                                    }
+                                }
+                            },
+                            "mUID": 1997795584966094974
+                        }
+                    }
+                ],
+                "States": [
+                    {
+                        "Type": "o2::WidgetState",
+                        "Value": {
+                            "name": "visible",
+                            "mState": true,
+                            "mAnimation": {
+                                "instance": {
+                                    "Type": "o2::AnimationAsset",
+                                    "Value": {
+                                        "animation": {
+                                            "mTracks": [
+                                                {
+                                                    "Type": "o2::AnimationTrack<float>",
+                                                    "Value": {
+                                                        "path": "transparency",
+                                                        "curve": {
+                                                            "mKeys": [
+                                                                {
+                                                                    "uid": 14362821980865272452,
+                                                                    "rightSupportValue": 0.5,
+                                                                    "rightSupportPosition": 0.061005979776382449
+                                                                },
+                                                                {
+                                                                    "uid": 4360832866147615086,
+                                                                    "value": 1.0,
+                                                                    "position": 0.12201195955276489,
+                                                                    "leftSupportValue": -0.5,
+                                                                    "leftSupportPosition": -0.061005979776382449
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "mDuration": 0.12201195955276489
+                                        }
+                                    }
+                                },
+                                "meta": {
+                                    "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
+                                    "Value": {
+                                        "mId": "19e202f346ad342103c42fdc518e43de"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::Actor",
+            "Value": {
+                "mName": "GameManager",
+                "Id": 15561548605106517381,
+                "Transform": {
+                    "position": {
+                        "x": 50.0,
+                        "y": 50.0
+                    },
+                    "size": {
+                        "x": 100.0,
+                        "y": 100.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "Components": [
+                    {
+                        "Type": "GameManager",
+                        "Data": {
+                            "mGamefield": {
+                                "ActorID": 3625219943961589091,
+                                "ComponentId": 6193086113682722973
+                            },
+                            "mMenu": {
+                                "ActorID": 4933920305873090738,
+                                "ComponentId": 7785265942034566915
+                            },
+                            "mId": 4289631875134300142
                         }
                     }
                 ]

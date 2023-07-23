@@ -3,6 +3,13 @@
 
 void GameManager::OnStart()
 {
+	mMenu->SetGameManager(this);
+	mMenu->Hide();
+}
+
+void GameManager::RestartGame()
+{
+
 }
 // --- META ---
 

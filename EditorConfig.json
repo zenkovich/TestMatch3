@@ -1,7 +1,7 @@
 {
     "mWindowSize": {
         "x": 1552,
-        "y": 946
+        "y": 928
     },
     "mWindowPosition": {
         "x": -8,
@@ -20,7 +20,7 @@
                     "anchors": {
                         "left": 0.0,
                         "bottom": 0.0,
-                        "right": 0.7046879529953003,
+                        "right": 0.6949222087860107,
                         "top": 1.0
                     },
                     "childs": [
@@ -74,7 +74,7 @@
                 },
                 {
                     "anchors": {
-                        "left": 0.7046879529953003,
+                        "left": 0.6949222087860107,
                         "bottom": 0.0,
                         "right": 1.0,
                         "top": 1.0
@@ -88,5 +88,5 @@
             ]
         }
     },
-    "mLastLoadedScene": "../../Assets/Gamefield.scn"
+    "mLastLoadedScene": "Gamefield.scn"
 }
