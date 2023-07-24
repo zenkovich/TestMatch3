@@ -14,12 +14,12 @@
                     "y": 1.0000061988830567
                 },
                 "offsetMin": {
-                    "x": 64.0,
-                    "y": -322.3987121582031
+                    "x": -61.0,
+                    "y": -322.0
                 },
                 "offsetMax": {
-                    "x": -61.0,
-                    "y": -151.398681640625
+                    "x": 64.0,
+                    "y": -151.0
                 }
             },
             "InternalWidgets": [],
@@ -44,7 +44,7 @@
                                 }
                             }
                         },
-                        "mUID": 3065410126162565327
+                        "mUID": 11249027156433571831
                     }
                 },
                 {
@@ -63,7 +63,7 @@
                                 "mHorAlign": "Middle"
                             }
                         },
-                        "mUID": 11628411936868828526
+                        "mUID": 7277739558062589664
                     }
                 }
             ],
@@ -81,58 +81,35 @@
                                             {
                                                 "Type": "o2::AnimationTrack<float>",
                                                 "Value": {
-                                                    "path": "layer/Back/drawable/scaleX",
+                                                    "path": "layer/Back/transparency",
                                                     "curve": {
                                                         "mKeys": [
                                                             {
-                                                                "uid": 2535219913761652884,
+                                                                "uid": 1496127221223250022,
                                                                 "value": 1.0,
-                                                                "rightSupportPosition": 0.08250810205936432,
-                                                                "supportsType": "Flat"
+                                                                "rightSupportValue": -0.09999999403953552,
+                                                                "rightSupportPosition": 0.05350538343191147
                                                             },
                                                             {
-                                                                "uid": 10023685191679605722,
+                                                                "uid": 3351103598077408577,
                                                                 "value": 0.800000011920929,
-                                                                "position": 0.16501620411872865,
-                                                                "leftSupportPosition": -0.08250810205936432,
-                                                                "supportsType": "Flat"
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "Type": "o2::AnimationTrack<float>",
-                                                "Value": {
-                                                    "path": "layer/Back/drawable/scaleY",
-                                                    "curve": {
-                                                        "mKeys": [
-                                                            {
-                                                                "uid": 2098761868667264940,
-                                                                "value": 1.0,
-                                                                "rightSupportPosition": 0.08250810205936432,
-                                                                "supportsType": "Flat"
-                                                            },
-                                                            {
-                                                                "uid": 17547182093263830306,
-                                                                "value": 0.800000011920929,
-                                                                "position": 0.16501620411872865,
-                                                                "leftSupportPosition": -0.08250810205936432,
-                                                                "supportsType": "Flat"
+                                                                "position": 0.10701076686382294,
+                                                                "leftSupportValue": 0.09999999403953552,
+                                                                "leftSupportPosition": -0.05350538343191147
                                                             }
                                                         ]
                                                     }
                                                 }
                                             }
                                         ],
-                                        "mDuration": 0.16501620411872865
+                                        "mDuration": 0.10701076686382294
                                     }
                                 }
                             },
                             "meta": {
                                 "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
                                 "Value": {
-                                    "mId": "69471ded3db427cc139d2e0617f11920"
+                                    "mId": "54a4411425963eec6a9f03c667514a0b"
                                 }
                             }
                         }

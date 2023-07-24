@@ -22,7 +22,7 @@ void Chip::Process(float dt)
 	if (mState == State::Swapping)
 		UpdateSwapping(dt);
 
-	o2Debug.DrawText(GetOwnerActor()->transform->worldPosition, o2Reflection.GetEnumName(mState));
+	//o2Debug.DrawText(GetOwnerActor()->transform->worldPosition, o2Reflection.GetEnumName(mState));
 }
 
 void Chip::SetFallSpeed(float maxSpeed, float acceleration)
@@ -95,7 +95,7 @@ void Chip::UpdateFallingStep1(float dt)
 
 	UpdateFalling(moveDistance);
 
-	o2Debug.DrawLine(GetOwnerActor()->transform->worldPosition, mCell->GetOwnerActor()->transform->worldPosition);
+	//o2Debug.DrawLine(GetOwnerActor()->transform->worldPosition, mCell->GetOwnerActor()->transform->worldPosition);
 }
 
 void Chip::UpdateFalling(float distance)

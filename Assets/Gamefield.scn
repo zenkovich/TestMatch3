@@ -26,13 +26,13 @@
                 "mType": "FittedSize",
                 "mFixedOrFittedSize": {
                     "x": 1024.0,
-                    "y": 768.0
+                    "y": 1810.0
                 },
                 "Id": 10088183424363624464,
                 "Transform": {
                     "size": {
-                        "x": 1024.0,
-                        "y": 1759.1795654296876
+                        "x": 1024.31591796875,
+                        "y": 1810.0
                     },
                     "scale": {
                         "x": 1.0,
@@ -53,7 +53,7 @@
                 "Transform": {
                     "size": {
                         "x": 1024.0,
-                        "y": 3840.0
+                        "y": 1841.0
                     },
                     "scale": {
                         "x": 1.0,
@@ -274,7 +274,7 @@
                                 "meta": {
                                     "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
                                     "Value": {
-                                        "mId": "43a73611715f26f20afd2bde7f6c6df9"
+                                        "mId": "087347fb21cc32c60a76372961966655"
                                     }
                                 }
                             }
@@ -364,6 +364,16 @@
                             },
                             "PrototypeLink": 11979043947860913986,
                             "Id": 8493916462987383845,
+                            "Transform": {
+                                "offsetMin": {
+                                    "x": 64.0,
+                                    "y": -322.00390625
+                                },
+                                "offsetMax": {
+                                    "x": -61.0,
+                                    "y": -151.00390625
+                                }
+                            },
                             "mName": "ReloadBtn",
                             "onClick": [
                                 {
@@ -415,71 +425,7 @@
                             ],
                             "States": [
                                 {
-                                    "name": "pressed",
-                                    "mAnimation": {
-                                        "instance": {
-                                            "Type": "o2::AnimationAsset",
-                                            "Value": {
-                                                "animation": {
-                                                    "mTracks": [
-                                                        {
-                                                            "Type": "o2::AnimationTrack<float>",
-                                                            "Value": {
-                                                                "path": "layer/Back/drawable/scaleX",
-                                                                "curve": {
-                                                                    "mKeys": [
-                                                                        {
-                                                                            "uid": 2535219913761652884,
-                                                                            "value": 1.0,
-                                                                            "rightSupportPosition": 0.08250810205936432,
-                                                                            "supportsType": "Flat"
-                                                                        },
-                                                                        {
-                                                                            "uid": 10023685191679605722,
-                                                                            "value": 0.800000011920929,
-                                                                            "position": 0.16501620411872865,
-                                                                            "leftSupportPosition": -0.08250810205936432,
-                                                                            "supportsType": "Flat"
-                                                                        }
-                                                                    ]
-                                                                }
-                                                            }
-                                                        },
-                                                        {
-                                                            "Type": "o2::AnimationTrack<float>",
-                                                            "Value": {
-                                                                "path": "layer/Back/drawable/scaleY",
-                                                                "curve": {
-                                                                    "mKeys": [
-                                                                        {
-                                                                            "uid": 2098761868667264940,
-                                                                            "value": 1.0,
-                                                                            "rightSupportPosition": 0.08250810205936432,
-                                                                            "supportsType": "Flat"
-                                                                        },
-                                                                        {
-                                                                            "uid": 17547182093263830306,
-                                                                            "value": 0.800000011920929,
-                                                                            "position": 0.16501620411872865,
-                                                                            "leftSupportPosition": -0.08250810205936432,
-                                                                            "supportsType": "Flat"
-                                                                        }
-                                                                    ]
-                                                                }
-                                                            }
-                                                        }
-                                                    ],
-                                                    "mDuration": 0.16501620411872865
-                                                }
-                                            }
-                                        },
-                                        "meta": {
-                                            "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
-                                            "Value": {
-                                                "mId": "1ea016ea7d4d477f60f139504c403b3d"
-                                            }
-                                        }
-                                    }
+                                    "name": "pressed"
                                 }
                             ]
                         },
@@ -492,15 +438,15 @@
                                 "path": "Prefabs/MenuBtn.proto"
                             },
                             "PrototypeLink": 11979043947860913986,
-                            "Id": 584182782757307333,
+                            "Id": 5723365554791861444,
                             "Transform": {
                                 "offsetMin": {
                                     "x": 64.0,
-                                    "y": -531.00390625
+                                    "y": -541.2018432617188
                                 },
                                 "offsetMax": {
                                     "x": -61.0,
-                                    "y": -360.0039367675781
+                                    "y": -370.20184326171877
                                 }
                             },
                             "mName": "CloseBtn",
@@ -533,7 +479,7 @@
                                             }
                                         }
                                     },
-                                    "mUID": 14338328800770700086
+                                    "mUID": 1108135202052802592
                                 },
                                 {
                                     "name": "Text",
@@ -549,76 +495,12 @@
                                             "mHorAlign": "Middle"
                                         }
                                     },
-                                    "mUID": 11897371047027886745
+                                    "mUID": 12866023945867245779
                                 }
                             ],
                             "States": [
                                 {
-                                    "name": "pressed",
-                                    "mAnimation": {
-                                        "instance": {
-                                            "Type": "o2::AnimationAsset",
-                                            "Value": {
-                                                "animation": {
-                                                    "mTracks": [
-                                                        {
-                                                            "Type": "o2::AnimationTrack<float>",
-                                                            "Value": {
-                                                                "path": "layer/Back/drawable/scaleX",
-                                                                "curve": {
-                                                                    "mKeys": [
-                                                                        {
-                                                                            "uid": 2535219913761652884,
-                                                                            "value": 1.0,
-                                                                            "rightSupportPosition": 0.08250810205936432,
-                                                                            "supportsType": "Flat"
-                                                                        },
-                                                                        {
-                                                                            "uid": 10023685191679605722,
-                                                                            "value": 0.800000011920929,
-                                                                            "position": 0.16501620411872865,
-                                                                            "leftSupportPosition": -0.08250810205936432,
-                                                                            "supportsType": "Flat"
-                                                                        }
-                                                                    ]
-                                                                }
-                                                            }
-                                                        },
-                                                        {
-                                                            "Type": "o2::AnimationTrack<float>",
-                                                            "Value": {
-                                                                "path": "layer/Back/drawable/scaleY",
-                                                                "curve": {
-                                                                    "mKeys": [
-                                                                        {
-                                                                            "uid": 2098761868667264940,
-                                                                            "value": 1.0,
-                                                                            "rightSupportPosition": 0.08250810205936432,
-                                                                            "supportsType": "Flat"
-                                                                        },
-                                                                        {
-                                                                            "uid": 17547182093263830306,
-                                                                            "value": 0.800000011920929,
-                                                                            "position": 0.16501620411872865,
-                                                                            "leftSupportPosition": -0.08250810205936432,
-                                                                            "supportsType": "Flat"
-                                                                        }
-                                                                    ]
-                                                                }
-                                                            }
-                                                        }
-                                                    ],
-                                                    "mDuration": 0.16501620411872865
-                                                }
-                                            }
-                                        },
-                                        "meta": {
-                                            "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
-                                            "Value": {
-                                                "mId": "6768654b2f6b18e435c233966d771165"
-                                            }
-                                        }
-                                    }
+                                    "name": "pressed"
                                 }
                             ]
                         },
@@ -701,7 +583,7 @@
                                 "meta": {
                                     "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
                                     "Value": {
-                                        "mId": "19e202f346ad342103c42fdc518e43de"
+                                        "mId": "785a05e935147c747f2776df0e590b3f"
                                     }
                                 }
                             }

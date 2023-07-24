@@ -5,6 +5,8 @@
 #include "Gamefield/Behaviours/ChipsFallGamefieldBehaviour.h"
 #include "Gamefield/Cell/Cell.h"
 #include "Gamefield/Gamefield.h"
+#include "o2/Animation/Tracks/AnimationTrack.h"
+#include "o2/Scene/Components/ImageComponent.h"
 
 void CheckupTypes()
 {
@@ -15,4 +17,6 @@ void CheckupTypes()
 	CHECKUP_TYPE(Chip);
 	CHECKUP_TYPE(ChipsFallGamefieldBehaviour);
 	CHECKUP_TYPE(CheckMatchesGamefieldBehaviour);
+	CHECKUP_TYPE(ImageComponent);
+	CHECKUP_TYPE(AnimationTrack<float>);
 }
