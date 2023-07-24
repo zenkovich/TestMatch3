@@ -112,6 +112,8 @@ Ref<Cell> Gamefield::GetCell(int x, int y) const
 
 void Gamefield::DestroyChip(Ref<Chip>& chip)
 {
+	chip->OnDestroy();
+
 	o2Scene.DestroyActor(chip->GetOwnerActor());
 
 	mChips.Remove(chip);

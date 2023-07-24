@@ -56,6 +56,9 @@ public:
 	// Second step of falling, continues falling thru target cells
 	void UpdateFallingStep2(float dt);
 
+	// Calls OnDestroy on behaviour
+	void OnDestroy();
+
 	// Returns category of component
 	static String GetCategory() { return "Gamefield"; }
 
@@ -126,6 +129,7 @@ CLASS_METHODS_META(Chip)
 	FUNCTION().PUBLIC().SIGNATURE(void, CheckFallingDown);
 	FUNCTION().PUBLIC().SIGNATURE(void, UpdateFallingStep1, float);
 	FUNCTION().PUBLIC().SIGNATURE(void, UpdateFallingStep2, float);
+	FUNCTION().PUBLIC().SIGNATURE(void, OnDestroy);
 	FUNCTION().PUBLIC().SIGNATURE_STATIC(String, GetCategory);
 	FUNCTION().PRIVATE().SIGNATURE(void, UpdateFalling, float);
 	FUNCTION().PRIVATE().SIGNATURE(void, ContinueFalling);

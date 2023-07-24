@@ -18,6 +18,9 @@ public:
 	// Process behaviour
 	virtual void Process(float dt) {}
 
+	// Called when chip is destroyed
+	virtual void OnDestroy() {}
+
 	// Returns category of component
 	static String GetCategory() { return "Gamefield"; }
 
@@ -43,6 +46,7 @@ CLASS_METHODS_META(ChipBehaviour)
 
 	FUNCTION().PUBLIC().SIGNATURE(void, SetChip, Chip*);
 	FUNCTION().PUBLIC().SIGNATURE(void, Process, float);
+	FUNCTION().PUBLIC().SIGNATURE(void, OnDestroy);
 	FUNCTION().PUBLIC().SIGNATURE_STATIC(String, GetCategory);
 }
 END_META;

@@ -112,6 +112,12 @@ void Chip::UpdateFallingStep2(float dt)
 		StopFalling();
 }
 
+void Chip::OnDestroy()
+{
+	for (auto& behaviour : mBehaviours)
+		behaviour->OnDestroy();
+}
+
 void Chip::ContinueFalling()
 {
 	mState = State::Falling;
