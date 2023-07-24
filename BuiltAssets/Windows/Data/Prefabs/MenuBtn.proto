@@ -1,0 +1,121 @@
+{
+    "mActor": {
+        "Type": "o2::Button",
+        "Value": {
+            "mName": "MenuBtn",
+            "Id": 11979043947860913986,
+            "Transform": {
+                "anchorMin": {
+                    "x": 0.0,
+                    "y": 1.0000061988830567
+                },
+                "anchorMax": {
+                    "x": 1.0,
+                    "y": 1.0000061988830567
+                },
+                "offsetMin": {
+                    "x": -61.0,
+                    "y": -322.0
+                },
+                "offsetMax": {
+                    "x": 64.0,
+                    "y": -151.0
+                }
+            },
+            "InternalWidgets": [],
+            "Layers": [
+                {
+                    "Type": "o2::WidgetLayer",
+                    "Value": {
+                        "name": "Back",
+                        "mDrawable": {
+                            "Type": "o2::Sprite",
+                            "Value": {
+                                "mImageAsset": {
+                                    "id": "0a1e49a86ca1206c6d45581205ca100b",
+                                    "path": "Game field/UI/GreenCounterBack.png"
+                                },
+                                "mMode": "Sliced",
+                                "mSlices": {
+                                    "left": 43,
+                                    "bottom": 37,
+                                    "right": 43,
+                                    "top": 44
+                                }
+                            }
+                        },
+                        "mUID": 11249027156433571831
+                    }
+                },
+                {
+                    "Type": "o2::WidgetLayer",
+                    "Value": {
+                        "name": "Text",
+                        "mDrawable": {
+                            "Type": "o2::Text",
+                            "Value": {
+                                "mText": "Reload",
+                                "mFontAssetId": "2b1c72c43d480e7f20b96b8457073253",
+                                "mHeight": 40,
+                                "mSymbolsDistCoef": 1.0,
+                                "mLinesDistanceCoef": 1.0,
+                                "mVerAlign": "Middle",
+                                "mHorAlign": "Middle"
+                            }
+                        },
+                        "mUID": 7277739558062589664
+                    }
+                }
+            ],
+            "States": [
+                {
+                    "Type": "o2::WidgetState",
+                    "Value": {
+                        "name": "pressed",
+                        "mAnimation": {
+                            "instance": {
+                                "Type": "o2::AnimationAsset",
+                                "Value": {
+                                    "animation": {
+                                        "mTracks": [
+                                            {
+                                                "Type": "o2::AnimationTrack<float>",
+                                                "Value": {
+                                                    "path": "layer/Back/transparency",
+                                                    "curve": {
+                                                        "mKeys": [
+                                                            {
+                                                                "uid": 1496127221223250022,
+                                                                "value": 1.0,
+                                                                "rightSupportValue": -0.09999999403953552,
+                                                                "rightSupportPosition": 0.05350538343191147
+                                                            },
+                                                            {
+                                                                "uid": 3351103598077408577,
+                                                                "value": 0.800000011920929,
+                                                                "position": 0.10701076686382294,
+                                                                "leftSupportValue": 0.09999999403953552,
+                                                                "leftSupportPosition": -0.05350538343191147
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "mDuration": 0.10701076686382294
+                                    }
+                                }
+                            },
+                            "meta": {
+                                "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
+                                "Value": {
+                                    "mId": "54a4411425963eec6a9f03c667514a0b"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

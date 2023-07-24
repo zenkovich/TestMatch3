@@ -1,0 +1,228 @@
+{
+    "mActor": {
+        "Type": "Editor::CurveProperty",
+        "Value": {
+            "Prototype": {
+                "id": "07e637bc77e8547d20bc70c66d63355d",
+                "path": "Editor UI styles/Curve Property standard.proto"
+            },
+            "PrototypeLink": 4685617766954041072,
+            "Id": 13744541609008142860,
+            "mName": "with caption",
+            "mBorder": {
+                "left": 10.0,
+                "bottom": 0.0,
+                "right": 0.0,
+                "top": 0.0
+            },
+            "Children": [
+                {
+                    "Type": "o2::Label",
+                    "Data": {
+                        "Prototype": {
+                            "id": "799f68471cdb143f2a566c40355a7377",
+                            "path": "Editor UI styles/Label standard.proto"
+                        },
+                        "PrototypeLink": 8464266912148868969,
+                        "Id": 6016888394926112768,
+                        "Transform": {
+                            "weight": {
+                                "x": 0.6000000238418579,
+                                "y": 1.0
+                            }
+                        },
+                        "mName": "propertyName",
+                        "Layers": [
+                            {
+                                "mDrawable": {
+                                    "mHorAlign": "Left"
+                                },
+                                "mUID": 1889090203014906401,
+                                "PrototypeLink": 9613259363390956959
+                            }
+                        ]
+                    }
+                },
+                {
+                    "Type": "o2::Widget",
+                    "Data": {
+                        "PrototypeLink": 7421676084684836750,
+                        "Id": 13454537496449930108,
+                        "Children": [
+                            {
+                                "Type": "o2::HorizontalLayout",
+                                "Data": {
+                                    "PrototypeLink": 10776610555534229109,
+                                    "Id": 13234978023276585315,
+                                    "Children": [
+                                        {
+                                            "Type": "o2::Widget",
+                                            "Data": {
+                                                "PrototypeLink": 4039728362916522130,
+                                                "Id": 2461381602157044436,
+                                                "Transform": {
+                                                    "minSize": {
+                                                        "x": 0.0,
+                                                        "y": 10.0
+                                                    }
+                                                },
+                                                "mIsFocusable": false,
+                                                "Children": [
+                                                    {
+                                                        "Type": "Editor::CurvePreview",
+                                                        "Data": {
+                                                            "mName": "unnamed",
+                                                            "Id": 8871045379284152412,
+                                                            "Transform": {
+                                                                "anchorMax": {
+                                                                    "x": 1.0,
+                                                                    "y": 1.0
+                                                                },
+                                                                "offsetMin": {
+                                                                    "x": 1.0,
+                                                                    "y": 1.0
+                                                                },
+                                                                "offsetMax": {
+                                                                    "x": -1.0,
+                                                                    "y": -1.0
+                                                                }
+                                                            },
+                                                            "InternalWidgets": [],
+                                                            "Layers": [
+                                                                {
+                                                                    "Type": "o2::WidgetLayer",
+                                                                    "Value": {
+                                                                        "name": "image",
+                                                                        "mDrawable": {
+                                                                            "Type": "o2::Sprite",
+                                                                            "Value": {
+                                                                                "mTextureSrcRect": {
+                                                                                    "left": 0,
+                                                                                    "bottom": 0,
+                                                                                    "right": 0,
+                                                                                    "top": 0
+                                                                                }
+                                                                            }
+                                                                        },
+                                                                        "mUID": 11218590208557015655
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "States": []
+                                                        }
+                                                    }
+                                                ],
+                                                "Layers": [
+                                                    {
+                                                        "mUID": 9785818613923144006,
+                                                        "PrototypeLink": 13674645047152729385
+                                                    },
+                                                    {
+                                                        "mUID": 15858980327358438997,
+                                                        "PrototypeLink": 1299566289218244372
+                                                    },
+                                                    {
+                                                        "mUID": 12501817939622493767,
+                                                        "PrototypeLink": 15630543074484078273
+                                                    }
+                                                ],
+                                                "States": [
+                                                    {
+                                                        "name": "focused",
+                                                        "mAnimation": {
+                                                            "instance": {
+                                                                "Type": "o2::AnimationAsset",
+                                                                "Value": {
+                                                                    "animation": {
+                                                                        "mTracks": [
+                                                                            {
+                                                                                "Type": "o2::AnimationTrack<float>",
+                                                                                "Value": {
+                                                                                    "path": "layer/focus/transparency",
+                                                                                    "curve": {
+                                                                                        "mKeys": [
+                                                                                            {
+                                                                                                "uid": 12541576721041453678,
+                                                                                                "rightSupportPosition": 0.020000001415610315,
+                                                                                                "supportsType": "Broken"
+                                                                                            },
+                                                                                            {
+                                                                                                "uid": 2520775670188356522,
+                                                                                                "value": 1.0,
+                                                                                                "position": 0.05000000074505806,
+                                                                                                "leftSupportPosition": -0.05000000074505806,
+                                                                                                "supportsType": "Broken"
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        ],
+                                                                        "mDuration": 0.05000000074505806
+                                                                    }
+                                                                }
+                                                            },
+                                                            "meta": {
+                                                                "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
+                                                                "Value": {
+                                                                    "mId": "76f052e2727f6f6a1b3c14642ec6374b"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "hover",
+                                                        "mAnimation": {
+                                                            "instance": {
+                                                                "Type": "o2::AnimationAsset",
+                                                                "Value": {
+                                                                    "animation": {
+                                                                        "mTracks": [
+                                                                            {
+                                                                                "Type": "o2::AnimationTrack<float>",
+                                                                                "Value": {
+                                                                                    "path": "layer/hover/transparency",
+                                                                                    "curve": {
+                                                                                        "mKeys": [
+                                                                                            {
+                                                                                                "uid": 15834725505213730799,
+                                                                                                "rightSupportPosition": 0.020000001415610315,
+                                                                                                "supportsType": "Broken"
+                                                                                            },
+                                                                                            {
+                                                                                                "uid": 3686288929672075798,
+                                                                                                "value": 1.0,
+                                                                                                "position": 0.05000000074505806,
+                                                                                                "leftSupportPosition": -0.05000000074505806,
+                                                                                                "supportsType": "Broken"
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        ],
+                                                                        "mDuration": 0.05000000074505806
+                                                                    }
+                                                                }
+                                                            },
+                                                            "meta": {
+                                                                "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
+                                                                "Value": {
+                                                                    "mId": "6b4c7909477332e2673f3475699733a5"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

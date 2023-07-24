@@ -1,0 +1,66 @@
+{
+    "mActor": {
+        "Type": "o2::Actor",
+        "Value": {
+            "mName": "Cell",
+            "Id": 16633668516720314857,
+            "Transform": {
+                "size": {
+                    "x": 100.0,
+                    "y": 100.0
+                },
+                "scale": {
+                    "x": 1.0,
+                    "y": 1.0
+                },
+                "pivot": {
+                    "x": 0.5,
+                    "y": 0.5
+                }
+            },
+            "Children": [
+                {
+                    "Data": {
+                        "mName": "Back",
+                        "Id": 1461109918803645931,
+                        "Transform": {
+                            "size": {
+                                "x": 130.0,
+                                "y": 130.0
+                            },
+                            "scale": {
+                                "x": 1.0,
+                                "y": 1.0
+                            },
+                            "pivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            }
+                        },
+                        "Components": [
+                            {
+                                "Type": "o2::ImageComponent",
+                                "Data": {
+                                    "mImageAsset": {
+                                        "id": "428f2f4044cb67314f6853ec69df4047",
+                                        "path": "Game field/Cell.png"
+                                    },
+                                    "mId": 16124472446259009808
+                                }
+                            }
+                        ]
+                    },
+                    "Type": "o2::Actor"
+                }
+            ],
+            "Components": [
+                {
+                    "Type": "Cell",
+                    "Data": {
+                        "mId": 11174703553277500692
+                    }
+                }
+            ]
+        }
+    }
+}
