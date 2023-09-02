@@ -7,6 +7,7 @@
 #include "Gamefield/Gamefield.h"
 #include "o2/Animation/Tracks/AnimationTrack.h"
 #include "o2/Scene/Components/ImageComponent.h"
+#include "o2/Scene/Components/EditorTestComponent.h"
 
 void CheckupTypes()
 {
@@ -19,4 +20,5 @@ void CheckupTypes()
 	CHECKUP_TYPE(CheckMatchesGamefieldBehaviour);
 	CHECKUP_TYPE(ImageComponent);
 	CHECKUP_TYPE(AnimationTrack<float>);
+	CHECKUP_TYPE(EditorTestComponent);
 }

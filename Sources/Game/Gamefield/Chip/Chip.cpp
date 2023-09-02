@@ -125,6 +125,9 @@ void Chip::ContinueFalling()
 
 void Chip::StopFalling()
 {
+	if (mState == State::Standing)
+		return;
+
 	mState = State::Standing;
 	mFallSpeed = 0.0f;
 	mAccumulatedFallDistance = 0.0f;

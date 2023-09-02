@@ -3,6 +3,7 @@
 
 #include "o2/Scene/Scene.h"
 #include "Behaviours/CheckMatchesGamefieldBehaviour.h"
+#include "o2/Utils/Editor/EditorScope.h"
 
 void Gamefield::OnStart()
 {
@@ -16,7 +17,7 @@ void Gamefield::InitializeBehaviours()
 		behaviour->SetGamefield(this);
 }
 
-void Gamefield::Update(float dt)
+void Gamefield::OnUpdate(float dt)
 {
 	for (auto& fieldBehaviour : mBehaviours)
 		fieldBehaviour->Process(dt);
@@ -101,8 +102,7 @@ void Gamefield::DestroyField()
 void Gamefield::Restart()
 {
 	DestroyField();
-	GenerateField(Math::Random(mFieldMinSize, mFieldMaxSize),
-				  Math::Random(mFieldMinSize, mFieldMaxSize));
+	GenerateField(5, 5);
 }
 
 Ref<Cell> Gamefield::GetCell(int x, int y) const

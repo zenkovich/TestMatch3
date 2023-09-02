@@ -17,7 +17,7 @@ public:
 	void OnStart() override;
 
 	// Updates logic
-	void Update(float dt) override;
+	void OnUpdate(float dt) override;
 
 	// Returns field size
 	Vec2I GetFieldSize() const;
@@ -137,7 +137,7 @@ CLASS_METHODS_META(Gamefield)
 	typedef const Function<void(Chip* chip, int x, int y)>& _tmp1;
 
 	FUNCTION().PUBLIC().SIGNATURE(void, OnStart);
-	FUNCTION().PUBLIC().SIGNATURE(void, Update, float);
+	FUNCTION().PUBLIC().SIGNATURE(void, OnUpdate, float);
 	FUNCTION().PUBLIC().SIGNATURE(Vec2I, GetFieldSize);
 	FUNCTION().PUBLIC().SIGNATURE(Ref<Cell>, GetCell, int, int);
 	FUNCTION().PUBLIC().SIGNATURE(void, TrySwapChips, Cell*, Cell*);
