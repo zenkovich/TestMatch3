@@ -1,13 +1,16 @@
 {
     "Layers": [
         {
-            "mName": "Default"
+            "mName": "Back"
         },
         {
             "mName": "Gamefield"
         },
         {
             "mName": "UI"
+        },
+        {
+            "mName": "Default"
         }
     ],
     "DefaultLayer": "Default",
@@ -31,8 +34,8 @@
                 "Id": 10088183424363624464,
                 "Transform": {
                     "size": {
-                        "x": 1024.31591796875,
-                        "y": 1810.0
+                        "x": 1024.0,
+                        "y": 1858.4560546875
                     },
                     "scale": {
                         "x": 1.0,
@@ -48,7 +51,11 @@
         {
             "Type": "o2::Actor",
             "Value": {
+                "mInheritDrawingDepthFromParent": false,
                 "mName": "Back",
+                "mSceneLayer": {
+                    "mLayerName": "Back"
+                },
                 "Id": 7836838211585741885,
                 "Transform": {
                     "size": {
@@ -68,8 +75,6 @@
                     {
                         "Type": "o2::ImageComponent",
                         "Data": {
-                            "mDrawingDepth": -1.0,
-                            "mInheritDrawingDepthFromParent": false,
                             "mImageAsset": {
                                 "id": "2ceb437b033072b6266133a13c8704d7",
                                 "path": "Game field/Back.png"
@@ -84,7 +89,11 @@
         {
             "Type": "o2::Actor",
             "Value": {
+                "mInheritDrawingDepthFromParent": false,
                 "mName": "Gamefield",
+                "mSceneLayer": {
+                    "mLayerName": "Gamefield"
+                },
                 "Id": 3625219943961589091,
                 "Transform": {
                     "size": {
@@ -160,7 +169,11 @@
         {
             "Type": "o2::Button",
             "Value": {
+                "mInheritDrawingDepthFromParent": false,
                 "mName": "Options",
+                "mSceneLayer": {
+                    "mLayerName": "UI"
+                },
                 "onClick": [
                     {
                         "type": "ActorFunction",
@@ -274,7 +287,7 @@
                                 "meta": {
                                     "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
                                     "Value": {
-                                        "mId": "087347fb21cc32c60a76372961966655"
+                                        "mId": "1a350add336132e434cf363f3c242712"
                                     }
                                 }
                             }
@@ -286,8 +299,11 @@
         {
             "Type": "o2::Widget",
             "Value": {
+                "mInheritDrawingDepthFromParent": false,
                 "mName": "Menu",
-                "mLayerName": "UI",
+                "mSceneLayer": {
+                    "mLayerName": "UI"
+                },
                 "Id": 4933920305873090738,
                 "Transform": {
                     "anchorMin": {
@@ -583,7 +599,7 @@
                                 "meta": {
                                     "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
                                     "Value": {
-                                        "mId": "785a05e935147c747f2776df0e590b3f"
+                                        "mId": "2d2d6b38082d08643cec36741bc5670c"
                                     }
                                 }
                             }

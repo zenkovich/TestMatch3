@@ -3,7 +3,6 @@
         "Type": "o2::Actor",
         "Value": {
             "mName": "BaseChip",
-            "mLayerName": "Gamefield",
             "Id": 14915051646395384656,
             "Transform": {
                 "size": {
@@ -23,7 +22,6 @@
                 {
                     "Data": {
                         "mName": "Sprite",
-                        "mLayerName": "Gamefield",
                         "Id": 18031039795294469308,
                         "Transform": {
                             "size": {
