@@ -2,7 +2,11 @@
     "mActor": {
         "Type": "o2::Actor",
         "Value": {
+            "mInheritDrawingDepthFromParent": false,
             "mName": "BaseChip",
+            "mSceneLayer": {
+                "mLayerName": "Chips"
+            },
             "Id": 14915051646395384656,
             "Transform": {
                 "size": {

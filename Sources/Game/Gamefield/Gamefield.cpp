@@ -102,7 +102,7 @@ void Gamefield::DestroyField()
 void Gamefield::Restart()
 {
 	DestroyField();
-	GenerateField(5, 5);
+	GenerateField(Math::Random(mFieldMinSize, mFieldMaxSize), Math::Random(mFieldMinSize, mFieldMaxSize));
 }
 
 Ref<Cell> Gamefield::GetCell(int x, int y) const

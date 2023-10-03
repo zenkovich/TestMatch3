@@ -7,10 +7,13 @@
             "mName": "Gamefield"
         },
         {
-            "mName": "UI"
+            "mName": "Default"
         },
         {
-            "mName": "Default"
+            "mName": "Chips"
+        },
+        {
+            "mName": "UI"
         }
     ],
     "DefaultLayer": "Default",
@@ -287,7 +290,7 @@
                                 "meta": {
                                     "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
                                     "Value": {
-                                        "mId": "1a350add336132e434cf363f3c242712"
+                                        "mId": "093018f713c222b63ab4533868123998"
                                     }
                                 }
                             }
@@ -599,7 +602,7 @@
                                 "meta": {
                                     "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
                                     "Value": {
-                                        "mId": "2d2d6b38082d08643cec36741bc5670c"
+                                        "mId": "519761a959b520885f3d759f09d96f3f"
                                     }
                                 }
                             }
@@ -644,6 +647,117 @@
                                 "ComponentId": 7785265942034566915
                             },
                             "mId": 4289631875134300142
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::Actor",
+            "Value": {
+                "mName": "green",
+                "Id": 11823542876814756100,
+                "Transform": {
+                    "position": {
+                        "x": -783.0177001953125,
+                        "y": 124.16690063476563
+                    },
+                    "size": {
+                        "x": 210.0,
+                        "y": 210.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "Components": [
+                    {
+                        "Type": "o2::ImageComponent",
+                        "Data": {
+                            "mImageAsset": {
+                                "id": "2f7c14f05ee57aa8231c5e5d274e745c",
+                                "path": "Game field/Objects/Main/green.png"
+                            },
+                            "mId": 14548677494198379361
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::Actor",
+            "Value": {
+                "mName": "orange",
+                "Id": 17060269417168773203,
+                "Transform": {
+                    "position": {
+                        "x": -712.2791748046875,
+                        "y": -6.5919952392578129
+                    },
+                    "size": {
+                        "x": 209.99998474121095,
+                        "y": 209.99998474121095
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "Components": [
+                    {
+                        "Type": "o2::ImageComponent",
+                        "Data": {
+                            "mImageAsset": {
+                                "id": "2d0949e6779a35b75a3c079d0a540f56",
+                                "path": "Game field/Objects/Main/orange.png"
+                            },
+                            "mId": 8448699135546125700
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::Actor",
+            "Value": {
+                "mName": "red",
+                "Id": 8450188761320555358,
+                "Transform": {
+                    "position": {
+                        "x": -626.5355834960938,
+                        "y": -148.06884765625
+                    },
+                    "size": {
+                        "x": 209.99998474121095,
+                        "y": 209.99998474121095
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "Components": [
+                    {
+                        "Type": "o2::ImageComponent",
+                        "Data": {
+                            "mImageAsset": {
+                                "id": "592d45c52f371b1200273ab5702278fe",
+                                "path": "Game field/Objects/Main/red.png"
+                            },
+                            "mId": 13240795228811127187
                         }
                     }
                 ]

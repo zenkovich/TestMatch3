@@ -3,6 +3,7 @@
         "Type": "o2::Actor",
         "Value": {
             "mName": "Cell",
+            "mSceneLayer": {},
             "Id": 16633668516720314857,
             "Transform": {
                 "size": {
@@ -22,6 +23,7 @@
                 {
                     "Data": {
                         "mName": "Back",
+                        "mSceneLayer": {},
                         "Id": 1461109918803645931,
                         "Transform": {
                             "size": {

@@ -106,6 +106,7 @@ add_custom_target(
     COMMAND
     ${BIN_OUTPUTDIR}/AssetsBuilder -platform ${O2_PLATFORM} -source "${CMAKE_CURRENT_SOURCE_DIR}/Assets/" -target "${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/Data/" -target-tree "${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/Data.json" -compressor-config "${CMAKE_CURRENT_SOURCE_DIR}/o2/CompressToolsConfig.json"
     COMMENT "Build o2 assets: -platform ${O2_PLATFORM} -source \"${CMAKE_CURRENT_SOURCE_DIR}/Assets/\" -target \"${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/Data/\" -target-tree \"${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/Data.json\" -compressor-config \"${CMAKE_CURRENT_SOURCE_DIR}/o2/CompressToolsConfig.json\""
+    WORKING_DIRECTORY ${BIN_OUTPUTDIR}
 )
 
 add_dependencies(BuildAssets o2AssetsBuilder AssetsBuilder)
@@ -125,7 +126,7 @@ set_target_properties(TestMatch3 PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY_DEBUG ${BIN_OUTPUTDIR}
     RUNTIME_OUTPUT_DIRECTORY_MINSIZEREL ${BIN_OUTPUTDIR}
     RUNTIME_OUTPUT_DIRECTORY_RELEASE ${BIN_OUTPUTDIR}
-    RUNTIME_OUTPUT_DIRECTORY_RELEASEWITHDEBUGINFO ${BIN_OUTPUTDIR}
+    RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO ${BIN_OUTPUTDIR}
 )       
 
 if(MSVC)
@@ -140,6 +141,7 @@ if(O2_EDITOR)
         COMMAND
         ${BIN_OUTPUTDIR}/AssetsBuilder -platform ${O2_PLATFORM} -source "${CMAKE_CURRENT_SOURCE_DIR}/o2/Editor/Assets/" -target "${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/EditorData/" -target-tree "${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/EditorData.json" -compressor-config "${CMAKE_CURRENT_SOURCE_DIR}/o2/CompressToolsConfig.json"
         COMMENT "Build o2 editor assets: -platform ${O2_PLATFORM} -source \"${CMAKE_CURRENT_SOURCE_DIR}/o2/Editor/Assets/\" -target \"${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/EditorData/\" -target-tree \"${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/EditorData.json\" -compressor-config \"${CMAKE_CURRENT_SOURCE_DIR}/o2/CompressToolsConfig.json\""
+        WORKING_DIRECTORY ${BIN_OUTPUTDIR}
     )
 
     add_dependencies(BuildEditorAssets o2AssetsBuilder AssetsBuilder)
@@ -159,7 +161,7 @@ if(O2_EDITOR)
         RUNTIME_OUTPUT_DIRECTORY_DEBUG ${BIN_OUTPUTDIR}
         RUNTIME_OUTPUT_DIRECTORY_MINSIZEREL ${BIN_OUTPUTDIR}
         RUNTIME_OUTPUT_DIRECTORY_RELEASE ${BIN_OUTPUTDIR}
-        RUNTIME_OUTPUT_DIRECTORY_RELEASEWITHDEBUGINFO ${BIN_OUTPUTDIR}
+        RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO ${BIN_OUTPUTDIR}
     )  
 
     if(MSVC)
