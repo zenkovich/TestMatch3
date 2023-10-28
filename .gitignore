@@ -42,3 +42,4 @@ Bin/Win/Editor_dbg.exe
 build
 Bin/Windows/log.txt
 *.pdb
+BuiltAssets

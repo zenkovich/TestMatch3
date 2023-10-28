@@ -1,7 +1,7 @@
 {
     "mWindowSize": {
-        "x": 1552,
-        "y": 928
+        "x": 1936,
+        "y": 1168
     },
     "mWindowPosition": {
         "x": -8,
@@ -20,7 +20,7 @@
                     "anchors": {
                         "left": 0.0,
                         "bottom": 0.0,
-                        "right": 0.7404947280883789,
+                        "right": 0.7085935473442078,
                         "top": 1.0
                     },
                     "childs": [
@@ -74,7 +74,7 @@
                 },
                 {
                     "anchors": {
-                        "left": 0.7404947280883789,
+                        "left": 0.7085935473442078,
                         "bottom": 0.0,
                         "right": 1.0,
                         "top": 1.0
@@ -83,7 +83,7 @@
                         "properties window",
                         "game window"
                     ],
-                    "active": "properties window"
+                    "active": "game window"
                 }
             ]
         }

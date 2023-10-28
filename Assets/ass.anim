@@ -1,0 +1,75 @@
+{
+    "animation": {
+        "mTracks": [
+            {
+                "Type": "o2::AnimationTrack<float>",
+                "Value": {
+                    "path": "transparency",
+                    "curve": {
+                        "mKeys": [
+                            {
+                                "uid": 628222648617259894,
+                                "rightSupportPosition": 0.13001282513141633,
+                                "supportsType": "Flat"
+                            },
+                            {
+                                "uid": 11830101269334808335,
+                                "value": 1.0,
+                                "position": 0.26002565026283266,
+                                "leftSupportPosition": -0.13001282513141633,
+                                "supportsType": "Flat"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "Type": "o2::AnimationTrack<float>",
+                "Value": {
+                    "path": "transform/scaleX",
+                    "curve": {
+                        "mKeys": [
+                            {
+                                "uid": 12051494680928986518,
+                                "value": 0.10000000149011612,
+                                "rightSupportPosition": 0.13001282513141633,
+                                "supportsType": "Flat"
+                            },
+                            {
+                                "uid": 6522463780482885236,
+                                "value": 1.0,
+                                "position": 0.26002565026283266,
+                                "leftSupportPosition": -0.13001282513141633,
+                                "supportsType": "Flat"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "Type": "o2::AnimationTrack<float>",
+                "Value": {
+                    "path": "transform/scaleY",
+                    "curve": {
+                        "mKeys": [
+                            {
+                                "uid": 4928257920239987179,
+                                "value": 0.10000000149011612,
+                                "rightSupportPosition": 0.13001282513141633,
+                                "supportsType": "Flat"
+                            },
+                            {
+                                "uid": 12375131037107203314,
+                                "value": 1.0,
+                                "position": 0.26002565026283266,
+                                "leftSupportPosition": -0.13001282513141633,
+                                "supportsType": "Flat"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "mDuration": 0.26002565026283266
+    }
+}
