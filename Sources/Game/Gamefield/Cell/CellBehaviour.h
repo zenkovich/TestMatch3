@@ -10,35 +10,35 @@ class Cell;
 class CellBehaviour : public Component
 {
 public:
-	void SetCell(Cell* cell);
-	virtual void Process(float dt) {}
+    void SetCell(Cell* cell);
+    virtual void Process(float dt) {}
 
-	// Returns category of component
-	static String GetCategory() { return "Gamefield"; }
+    // Returns category of component
+    static String GetCategory() { return "Gamefield"; }
 
-	SERIALIZABLE(CellBehaviour);
+    SERIALIZABLE(CellBehaviour);
 
 protected:
-	Cell* mCell = nullptr;
+    Cell* mCell = nullptr;
 };
 // --- META ---
 
 CLASS_BASES_META(CellBehaviour)
 {
-	BASE_CLASS(Component);
+    BASE_CLASS(Component);
 }
 END_META;
 CLASS_FIELDS_META(CellBehaviour)
 {
-	FIELD().PROTECTED().DEFAULT_VALUE(nullptr).NAME(mCell);
+    FIELD().PROTECTED().DEFAULT_VALUE(nullptr).NAME(mCell);
 }
 END_META;
 CLASS_METHODS_META(CellBehaviour)
 {
 
-	FUNCTION().PUBLIC().SIGNATURE(void, SetCell, Cell*);
-	FUNCTION().PUBLIC().SIGNATURE(void, Process, float);
-	FUNCTION().PUBLIC().SIGNATURE_STATIC(String, GetCategory);
+    FUNCTION().PUBLIC().SIGNATURE(void, SetCell, Cell*);
+    FUNCTION().PUBLIC().SIGNATURE(void, Process, float);
+    FUNCTION().PUBLIC().SIGNATURE_STATIC(String, GetCategory);
 }
 END_META;
 // --- END META ---

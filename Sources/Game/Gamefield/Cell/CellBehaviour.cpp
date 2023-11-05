@@ -6,7 +6,7 @@
 
 void CellBehaviour::SetCell(Cell* cell)
 {
-	mCell = cell;
+    mCell = cell;
 }
 
 

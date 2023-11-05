@@ -5,30 +5,30 @@
 
 void GameMenu::SetGameManager(GameManager* gameManager)
 {
-	mGameManager = gameManager;
+    mGameManager = gameManager;
 }
 
 void GameMenu::Show()
 {
-	if (auto widget = dynamic_cast<Widget*>(GetOwnerActor()))
-		widget->SetEnabled(true);
+    if (auto widget = dynamic_cast<Widget*>(GetOwnerActor()))
+        widget->SetEnabled(true);
 }
 
 void GameMenu::Hide()
 {
-	if (auto widget = dynamic_cast<Widget*>(GetOwnerActor()))
-		widget->SetEnabled(false);
+    if (auto widget = dynamic_cast<Widget*>(GetOwnerActor()))
+        widget->SetEnabled(false);
 }
 
 void GameMenu::OnRestartPressed()
 {
-	mGameManager->RestartGame();
-	Hide();
+    mGameManager->RestartGame();
+    Hide();
 }
 
 void GameMenu::OnExitPressed()
 {
-	Hide();
+    Hide();
 }
 
 DECLARE_TEMPLATE_CLASS(Ref<GameMenu>);

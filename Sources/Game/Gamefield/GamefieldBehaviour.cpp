@@ -5,7 +5,7 @@
 
 void GamefieldBehaviour::SetGamefield(Gamefield* gamefield)
 {
-	mGamefield = gamefield;
+    mGamefield = gamefield;
 }
 
 DECLARE_TEMPLATE_CLASS(Ref<GamefieldBehaviour>);

@@ -5,7 +5,7 @@
 
 void ChipBehaviour::SetChip(Chip* chip)
 {
-	mChip = chip;
+    mChip = chip;
 }
 
 DECLARE_TEMPLATE_CLASS(Ref<ChipBehaviour>);

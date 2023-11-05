@@ -5,15 +5,15 @@
 
 bool ChipSpawner::CanSpawn() const
 {
-	return !mCell->GetChip();
+    return !mCell->GetChip();
 }
 
 void ChipSpawner::SpawnChip(Chip* chip)
 {
-	mCell->SetChip(chip);
+    mCell->SetChip(chip);
 
-	chip->SetState(Chip::State::Falling);
-	chip->GetOwnerActor()->transform->position = Vec2F(0, 100.0f);
+    chip->SetState(Chip::State::Falling);
+    chip->GetOwnerActor()->transform->position = Vec2F(0, 100.0f);
 }
 
 DECLARE_TEMPLATE_CLASS(Ref<ChipSpawner>);

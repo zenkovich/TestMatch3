@@ -6,32 +6,32 @@
 
 void ChipsFallGamefieldBehaviour::Process(float dt)
 {
-	mGamefield->ForEachChip([&](Chip* chip, int x, int y)
-				{
-					if (!chip->IsFalling())
-						return;
+    mGamefield->ForEachChip([&](Chip* chip, int x, int y)
+                {
+                    if (!chip->IsFalling())
+                        return;
 
-					chip->UpdateFallingStep1(dt);
-				});
+                    chip->UpdateFallingStep1(dt);
+                });
 
-	mGamefield->ForEachChip([&](Chip* chip, int x, int y)
-				{
-					if (chip->GetState() == Chip::State::Standing || chip->GetState() == Chip::State::CheckFallingNext)
-						chip->CheckFallingDown();
-				});
+    mGamefield->ForEachChip([&](Chip* chip, int x, int y)
+                {
+                    if (chip->GetState() == Chip::State::Standing || chip->GetState() == Chip::State::CheckFallingNext)
+                        chip->CheckFallingDown();
+                });
 
-	mGamefield->ForEachChip([&](Chip* chip, int x, int y)
-				{
-					if (!chip->IsFalling())
-						return;
+    mGamefield->ForEachChip([&](Chip* chip, int x, int y)
+                {
+                    if (!chip->IsFalling())
+                        return;
 
-					chip->UpdateFallingStep2(dt);
-				});
+                    chip->UpdateFallingStep2(dt);
+                });
 }
 
 void ChipsFallGamefieldBehaviour::OnChipCreated(Chip* chip)
 {
-	chip->SetFallSpeed(mChipsFallingMaxSpeed, mChipsFallingAcceleration);
+    chip->SetFallSpeed(mChipsFallingMaxSpeed, mChipsFallingAcceleration);
 }
 // --- META ---
 

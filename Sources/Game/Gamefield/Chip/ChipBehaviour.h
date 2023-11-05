@@ -12,42 +12,42 @@ class Chip;
 class ChipBehaviour : public Component
 {
 public:
-	// Initializes chip
-	void SetChip(Chip* chip);
+    // Initializes chip
+    void SetChip(Chip* chip);
 
-	// Process behaviour
-	virtual void Process(float dt) {}
+    // Process behaviour
+    virtual void Process(float dt) {}
 
-	// Called when chip is destroyed
-	virtual void OnDestroy() {}
+    // Called when chip is destroyed
+    virtual void OnDestroy() {}
 
-	// Returns category of component
-	static String GetCategory() { return "Gamefield"; }
+    // Returns category of component
+    static String GetCategory() { return "Gamefield"; }
 
-	SERIALIZABLE(ChipBehaviour);
+    SERIALIZABLE(ChipBehaviour);
 
 protected:
-	Chip* mChip = nullptr; 
+    Chip* mChip = nullptr; 
 };
 // --- META ---
 
 CLASS_BASES_META(ChipBehaviour)
 {
-	BASE_CLASS(Component);
+    BASE_CLASS(Component);
 }
 END_META;
 CLASS_FIELDS_META(ChipBehaviour)
 {
-	FIELD().PROTECTED().DEFAULT_VALUE(nullptr).NAME(mChip);
+    FIELD().PROTECTED().DEFAULT_VALUE(nullptr).NAME(mChip);
 }
 END_META;
 CLASS_METHODS_META(ChipBehaviour)
 {
 
-	FUNCTION().PUBLIC().SIGNATURE(void, SetChip, Chip*);
-	FUNCTION().PUBLIC().SIGNATURE(void, Process, float);
-	FUNCTION().PUBLIC().SIGNATURE(void, OnDestroy);
-	FUNCTION().PUBLIC().SIGNATURE_STATIC(String, GetCategory);
+    FUNCTION().PUBLIC().SIGNATURE(void, SetChip, Chip*);
+    FUNCTION().PUBLIC().SIGNATURE(void, Process, float);
+    FUNCTION().PUBLIC().SIGNATURE(void, OnDestroy);
+    FUNCTION().PUBLIC().SIGNATURE_STATIC(String, GetCategory);
 }
 END_META;
 // --- END META ---

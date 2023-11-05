@@ -7,15 +7,15 @@ using namespace o2;
 class GameApplication: public Application
 {
 protected:
-	// Calls when application is starting
-	void OnStarted() override;
+    // Calls when application is starting
+    void OnStarted() override;
 
-	// Called on updating
-	void OnUpdate(float dt) override;
+    // Called on updating
+    void OnUpdate(float dt) override;
 
-	// Called on drawing
-	void OnDraw() override;
+    // Called on drawing
+    void OnDraw() override;
 
-	// Draws scene
-	void DrawScene() override;
+    // Draws scene
+    void DrawScene() override;
 };

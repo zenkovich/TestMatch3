@@ -11,14 +11,14 @@
 
 void CheckupTypes()
 {
-	CHECKUP_TYPE(Cell);
-	CHECKUP_TYPE(GameMenu);
-	CHECKUP_TYPE(GameManager);
-	CHECKUP_TYPE(Gamefield);
-	CHECKUP_TYPE(Chip);
-	CHECKUP_TYPE(ChipsFallGamefieldBehaviour);
-	CHECKUP_TYPE(CheckMatchesGamefieldBehaviour);
-	CHECKUP_TYPE(ImageComponent);
-	CHECKUP_TYPE(AnimationTrack<float>);
-	CHECKUP_TYPE(EditorTestComponent);
+    CHECKUP_TYPE(Cell);
+    CHECKUP_TYPE(GameMenu);
+    CHECKUP_TYPE(GameManager);
+    CHECKUP_TYPE(Gamefield);
+    CHECKUP_TYPE(Chip);
+    CHECKUP_TYPE(ChipsFallGamefieldBehaviour);
+    CHECKUP_TYPE(CheckMatchesGamefieldBehaviour);
+    CHECKUP_TYPE(ImageComponent);
+    CHECKUP_TYPE(AnimationTrack<float>);
+    CHECKUP_TYPE(EditorTestComponent);
 }
