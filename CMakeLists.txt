@@ -39,6 +39,7 @@ add_dependencies(GameLib o2Framework)
 if(WIN32)
     add_custom_command(TARGET GameLib PRE_BUILD
                        COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/o2/CodeTool/Bin/o2CodeTool 
+                            -project GameLib
                             -sources "${CMAKE_CURRENT_SOURCE_DIR}/Sources/Game" 
                             -parent_projects "${CMAKE_CURRENT_SOURCE_DIR}/o2/Framework/Sources/o2/CodeToolCache.xml")
 endif()
@@ -68,8 +69,13 @@ add_dependencies(EditorLib GameLib o2Editor)
 if(WIN32)
     add_custom_command(TARGET EditorLib PRE_BUILD
                        COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/o2/CodeTool/Bin/o2CodeTool 
+                            -project EditorLib
                             -sources "${CMAKE_CURRENT_SOURCE_DIR}/Sources/Game" 
-                            -parent_projects "${CMAKE_CURRENT_SOURCE_DIR}/o2/Framework/Sources/o2/CodeToolCache.xml")
+                            -parent_projects "${CMAKE_CURRENT_SOURCE_DIR}/o2/Framework/Sources/o2/CodeToolCache.xml"
+                       COMMENT "Run CodeTool: ${CMAKE_CURRENT_SOURCE_DIR}/o2/CodeTool/Bin/o2CodeTool 
+                            -project EditorLib
+                            -sources \"${CMAKE_CURRENT_SOURCE_DIR}/Sources/Game\" 
+                            -parent_projects \"${CMAKE_CURRENT_SOURCE_DIR}/o2/Framework/Sources/o2/CodeToolCache.xml\"")
 endif()
 
 if(MSVC)
@@ -103,9 +109,18 @@ endif()
 # Build assets step
 add_custom_target(
     BuildAssets
-    COMMAND
-    ${BIN_OUTPUTDIR}/AssetsBuilder -platform ${O2_PLATFORM} -source "${CMAKE_CURRENT_SOURCE_DIR}/Assets/" -target "${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/Data/" -target-tree "${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/Data.json" -compressor-config "${CMAKE_CURRENT_SOURCE_DIR}/o2/CompressToolsConfig.json"
-    COMMENT "Build o2 assets: -platform ${O2_PLATFORM} -source \"${CMAKE_CURRENT_SOURCE_DIR}/Assets/\" -target \"${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/Data/\" -target-tree \"${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/Data.json\" -compressor-config \"${CMAKE_CURRENT_SOURCE_DIR}/o2/CompressToolsConfig.json\""
+    COMMAND ${BIN_OUTPUTDIR}/AssetsBuilder 
+        -platform ${O2_PLATFORM} 
+        -source "${CMAKE_CURRENT_SOURCE_DIR}/Assets/" 
+        -target "${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/Data/" 
+        -target-tree "${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/Data.json" 
+        -compressor-config "${CMAKE_CURRENT_SOURCE_DIR}/o2/CompressToolsConfig.json"
+    COMMENT "Build o2 assets: 
+        -platform ${O2_PLATFORM} 
+        -source \"${CMAKE_CURRENT_SOURCE_DIR}/Assets/\" 
+        -target \"${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/Data/\" 
+        -target-tree \"${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/Data.json\" 
+        -compressor-config \"${CMAKE_CURRENT_SOURCE_DIR}/o2/CompressToolsConfig.json\""
     WORKING_DIRECTORY ${BIN_OUTPUTDIR}
 )
 
@@ -138,9 +153,18 @@ if(O2_EDITOR)
     # editor assets build step
     add_custom_target(
         BuildEditorAssets
-        COMMAND
-        ${BIN_OUTPUTDIR}/AssetsBuilder -platform ${O2_PLATFORM} -source "${CMAKE_CURRENT_SOURCE_DIR}/o2/Editor/Assets/" -target "${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/EditorData/" -target-tree "${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/EditorData.json" -compressor-config "${CMAKE_CURRENT_SOURCE_DIR}/o2/CompressToolsConfig.json"
-        COMMENT "Build o2 editor assets: -platform ${O2_PLATFORM} -source \"${CMAKE_CURRENT_SOURCE_DIR}/o2/Editor/Assets/\" -target \"${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/EditorData/\" -target-tree \"${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/EditorData.json\" -compressor-config \"${CMAKE_CURRENT_SOURCE_DIR}/o2/CompressToolsConfig.json\""
+        COMMAND ${BIN_OUTPUTDIR}/AssetsBuilder 
+            -platform ${O2_PLATFORM} 
+            -source "${CMAKE_CURRENT_SOURCE_DIR}/o2/Editor/Assets/" 
+            -target "${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/EditorData/" 
+            -target-tree "${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/EditorData.json" 
+            -compressor-config "${CMAKE_CURRENT_SOURCE_DIR}/o2/CompressToolsConfig.json"
+        COMMENT "Build o2 editor assets: 
+            -platform ${O2_PLATFORM} 
+            -source \"${CMAKE_CURRENT_SOURCE_DIR}/o2/Editor/Assets/\" 
+            -target \"${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/EditorData/\" 
+            -target-tree \"${CMAKE_CURRENT_SOURCE_DIR}/BuiltAssets/${O2_PLATFORM}/EditorData.json\" 
+            -compressor-config \"${CMAKE_CURRENT_SOURCE_DIR}/o2/CompressToolsConfig.json\""
         WORKING_DIRECTORY ${BIN_OUTPUTDIR}
     )
 

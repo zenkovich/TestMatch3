@@ -11,5 +11,5 @@ void GamefieldBehaviour::SetGamefield(Gamefield* gamefield)
 DECLARE_TEMPLATE_CLASS(Ref<GamefieldBehaviour>);
 // --- META ---
 
-DECLARE_CLASS(GamefieldBehaviour);
+DECLARE_CLASS(GamefieldBehaviour, GamefieldBehaviour);
 // --- END META ---

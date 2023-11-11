@@ -34,5 +34,5 @@ void GameMenu::OnExitPressed()
 DECLARE_TEMPLATE_CLASS(Ref<GameMenu>);
 // --- META ---
 
-DECLARE_CLASS(GameMenu);
+DECLARE_CLASS(GameMenu, GameMenu);
 // --- END META ---

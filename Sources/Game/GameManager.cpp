@@ -15,5 +15,5 @@ void GameManager::RestartGame()
 }
 // --- META ---
 
-DECLARE_CLASS(GameManager);
+DECLARE_CLASS(GameManager, GameManager);
 // --- END META ---

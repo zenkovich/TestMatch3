@@ -268,5 +268,5 @@ void Gamefield::ForEachChip(const Function<void(Chip* chip, int x, int y)>& func
 DECLARE_TEMPLATE_CLASS(Ref<Gamefield>);
 // --- META ---
 
-DECLARE_CLASS(Gamefield);
+DECLARE_CLASS(Gamefield, Gamefield);
 // --- END META ---

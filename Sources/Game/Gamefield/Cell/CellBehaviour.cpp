@@ -13,5 +13,5 @@ void CellBehaviour::SetCell(Cell* cell)
 DECLARE_TEMPLATE_CLASS(Ref<CellBehaviour>);
 // --- META ---
 
-DECLARE_CLASS(CellBehaviour);
+DECLARE_CLASS(CellBehaviour, CellBehaviour);
 // --- END META ---

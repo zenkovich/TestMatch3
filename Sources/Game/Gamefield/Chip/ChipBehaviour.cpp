@@ -11,5 +11,5 @@ void ChipBehaviour::SetChip(Chip* chip)
 DECLARE_TEMPLATE_CLASS(Ref<ChipBehaviour>);
 // --- META ---
 
-DECLARE_CLASS(ChipBehaviour);
+DECLARE_CLASS(ChipBehaviour, ChipBehaviour);
 // --- END META ---

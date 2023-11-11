@@ -3,9 +3,12 @@
 
 #include "CheckupTypes.h"
 
+extern void InitializeTypesGameLib();
+
 int main()
 {
 	INITIALIZE_O2;
+	InitializeTypesGameLib();
 
 	CheckupTypes();
 

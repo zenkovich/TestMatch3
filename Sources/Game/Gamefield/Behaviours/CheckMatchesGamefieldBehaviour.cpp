@@ -89,5 +89,5 @@ void CheckMatchesGamefieldBehaviour::FindChipsMatch(const Vec2I& pos, const Vec2
 }
 // --- META ---
 
-DECLARE_CLASS(CheckMatchesGamefieldBehaviour);
+DECLARE_CLASS(CheckMatchesGamefieldBehaviour, CheckMatchesGamefieldBehaviour);
 // --- END META ---

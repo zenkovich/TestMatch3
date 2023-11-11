@@ -161,5 +161,5 @@ ENUM_META(Chip::State)
 }
 END_ENUM_META;
 
-DECLARE_CLASS(Chip);
+DECLARE_CLASS(Chip, Chip);
 // --- END META ---

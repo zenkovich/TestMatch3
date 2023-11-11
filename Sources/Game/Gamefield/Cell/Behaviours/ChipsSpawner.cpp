@@ -19,5 +19,5 @@ void ChipSpawner::SpawnChip(Chip* chip)
 DECLARE_TEMPLATE_CLASS(Ref<ChipSpawner>);
 // --- META ---
 
-DECLARE_CLASS(ChipSpawner);
+DECLARE_CLASS(ChipSpawner, ChipSpawner);
 // --- END META ---

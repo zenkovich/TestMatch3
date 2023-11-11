@@ -157,5 +157,5 @@ ENUM_META(Cell::FallAvoidDirection)
 }
 END_ENUM_META;
 
-DECLARE_CLASS(Cell);
+DECLARE_CLASS(Cell, Cell);
 // --- END META ---

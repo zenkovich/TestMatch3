@@ -35,5 +35,5 @@ void ChipsFallGamefieldBehaviour::OnChipCreated(Chip* chip)
 }
 // --- META ---
 
-DECLARE_CLASS(ChipsFallGamefieldBehaviour);
+DECLARE_CLASS(ChipsFallGamefieldBehaviour, ChipsFallGamefieldBehaviour);
 // --- END META ---
