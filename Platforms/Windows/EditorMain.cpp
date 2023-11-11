@@ -4,7 +4,6 @@
 #include "o2Editor/Core/EditorConfig.h"
 #include "o2Editor/Core/ToolsPanel.h"
 #include "o2Editor/Core/WindowsSystem/WindowsManager.h"
-#include "CheckupTypes.h"
 
 using namespace o2;
 
@@ -20,8 +19,6 @@ int main()
     InitializeTypeso2Editor();
     InitializeTypesGameLib();
 	INITIALIZE_O2;
-
-	CheckupTypes();
 
 	Editor::EditorApplication* app = mnew Editor::EditorApplication();
 	app->Initialize();
